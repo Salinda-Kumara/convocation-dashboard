@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect } from 'react';
 import StatsCard from '@/components/StatsCard';
 import SearchBar from '@/components/SearchBar';
 import DataTable from '@/components/DataTable';
-import StatusChart from '@/components/StatusChart';
 import styles from './DashboardClient.module.css';
 
 export default function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: initialStats, fieldStats: initialFieldStats, totalStudents: initialTotalStudents }) {
@@ -113,11 +112,6 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
 
     return (
         <>
-            {/* Status Chart */}
-            <div className={styles.chartSection}>
-                <StatusChart stats={stats} />
-            </div>
-
             {/* Stats Grid - Moved above table */}
             <div className={styles.statsGrid}>
                 <StatsCard

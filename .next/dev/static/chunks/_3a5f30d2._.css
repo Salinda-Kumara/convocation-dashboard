@@ -272,30 +272,6 @@
   }
 }
 
-/* [project]/components/StatusChart.module.css [app-client] (css) */
-.StatusChart-module__aLvSBG__chartContainer {
-  background: var(--card-bg);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  margin-top: 2rem;
-  padding: 1.5rem;
-}
-
-.StatusChart-module__aLvSBG__chartTitle {
-  color: var(--foreground);
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.StatusChart-module__aLvSBG__label {
-  font-size: .875rem;
-  font-weight: 600;
-}
-
 /* [project]/app/DashboardClient.module.css [app-client] (css) */
 .DashboardClient-module__MP3H1a__chartSection {
   margin-bottom: 2rem;
@@ -535,4 +511,4 @@
   }
 }
 
-/*# sourceMappingURL=_671738e1._.css.map*/
+/*# sourceMappingURL=_3a5f30d2._.css.map*/

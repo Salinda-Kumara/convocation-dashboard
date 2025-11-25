@@ -101,3 +101,17 @@
     color: #64748b;
     border: 1px solid rgba(100, 116, 139, 0.3);
 }
+
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .badge {
+        padding: 0.1rem 0.4rem;
+        font-size: 0.65rem;
+    }
+}

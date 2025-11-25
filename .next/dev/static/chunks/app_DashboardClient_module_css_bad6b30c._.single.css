@@ -136,8 +136,18 @@
   transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .DashboardClient-module__MP3H1a__statsGrid, .DashboardClient-module__MP3H1a__chartsGrid {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .DashboardClient-module__MP3H1a__chartsGrid {
     grid-template-columns: 1fr;
   }
 
@@ -148,6 +158,12 @@
 
   .DashboardClient-module__MP3H1a__exportBtn {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: 1fr;
   }
 }
 

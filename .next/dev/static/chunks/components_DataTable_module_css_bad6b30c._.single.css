@@ -103,4 +103,16 @@
   border: 1px solid #64748b4d;
 }
 
+@media (max-width: 768px) {
+  .DataTable-module__K4GEfq__table th, .DataTable-module__K4GEfq__table td {
+    padding: .5rem;
+    font-size: .75rem;
+  }
+
+  .DataTable-module__K4GEfq__badge {
+    padding: .1rem .4rem;
+    font-size: .65rem;
+  }
+}
+
 /*# sourceMappingURL=components_DataTable_module_css_bad6b30c._.single.css.map*/

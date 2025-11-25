@@ -102,4 +102,19 @@
   height: 6px;
 }
 
+@media (max-width: 768px) {
+  .StatsCard-module__PjJ0xW__card {
+    padding: 1rem;
+  }
+
+  .StatsCard-module__PjJ0xW__value {
+    font-size: 1.5rem;
+  }
+
+  .StatsCard-module__PjJ0xW__icon {
+    font-size: 2rem;
+    right: 1rem;
+  }
+}
+
 /*# sourceMappingURL=components_StatsCard_module_css_bad6b30c._.single.css.map*/

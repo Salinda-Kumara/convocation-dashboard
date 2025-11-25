@@ -337,19 +337,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusChart$2e
 ;
 const COLORS = {
     'Approved': '#10b981',
-    'Pending': '#f59e0b',
-    'Not Submitted': '#ef4444',
-    'Other': '#64748b'
+    'Not Submitted': '#ef4444'
 };
 function StatusChart({ stats }) {
     const data = [
         {
             name: 'Approved',
             value: stats.approved
-        },
-        {
-            name: 'Pending',
-            value: stats.pending
         },
         {
             name: 'Not Submitted',
@@ -371,7 +365,7 @@ function StatusChart({ stats }) {
             children: `${(percent * 100).toFixed(0)}%`
         }, void 0, false, {
             fileName: "[project]/components/StatusChart.js",
-            lineNumber: 28,
+            lineNumber: 25,
             columnNumber: 13
         }, this);
     };
@@ -380,15 +374,15 @@ function StatusChart({ stats }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusChart$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chartTitle,
-                children: "Status Distribution"
+                children: "📊 Status Distribution"
             }, void 0, false, {
                 fileName: "[project]/components/StatusChart.js",
-                lineNumber: 43,
+                lineNumber: 40,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ResponsiveContainer"], {
                 width: "100%",
-                height: 300,
+                height: 250,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$PieChart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PieChart"], {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$polar$2f$Pie$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Pie"], {
@@ -397,19 +391,19 @@ function StatusChart({ stats }) {
                             cy: "50%",
                             labelLine: false,
                             label: renderCustomLabel,
-                            outerRadius: 100,
+                            outerRadius: 80,
                             fill: "#8884d8",
                             dataKey: "value",
                             children: data.map((entry, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Cell"], {
                                     fill: COLORS[entry.name]
                                 }, `cell-${index}`, false, {
                                     fileName: "[project]/components/StatusChart.js",
-                                    lineNumber: 57,
+                                    lineNumber: 54,
                                     columnNumber: 29
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/StatusChart.js",
-                            lineNumber: 46,
+                            lineNumber: 43,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -421,34 +415,36 @@ function StatusChart({ stats }) {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/StatusChart.js",
-                            lineNumber: 60,
+                            lineNumber: 57,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Legend$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Legend"], {
                             wrapperStyle: {
-                                color: '#e2e8f0'
+                                color: '#e2e8f0',
+                                fontSize: '12px'
                             },
-                            iconType: "circle"
+                            iconType: "circle",
+                            iconSize: 8
                         }, void 0, false, {
                             fileName: "[project]/components/StatusChart.js",
-                            lineNumber: 68,
+                            lineNumber: 65,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/StatusChart.js",
-                    lineNumber: 45,
+                    lineNumber: 42,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/StatusChart.js",
-                lineNumber: 44,
+                lineNumber: 41,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/StatusChart.js",
-        lineNumber: 42,
+        lineNumber: 39,
         columnNumber: 9
     }, this);
 }
@@ -456,12 +452,18 @@ function StatusChart({ stats }) {
 "[project]/app/DashboardClient.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
+  "actions": "DashboardClient-module__MP3H1a__actions",
   "chartContainer": "DashboardClient-module__MP3H1a__chartContainer",
+  "chartSection": "DashboardClient-module__MP3H1a__chartSection",
   "chartTitle": "DashboardClient-module__MP3H1a__chartTitle",
   "chartsGrid": "DashboardClient-module__MP3H1a__chartsGrid",
+  "exportBtn": "DashboardClient-module__MP3H1a__exportBtn",
   "filterBadge": "DashboardClient-module__MP3H1a__filterBadge",
+  "quickStatsContainer": "DashboardClient-module__MP3H1a__quickStatsContainer",
+  "quickStatsGrid": "DashboardClient-module__MP3H1a__quickStatsGrid",
   "resultCount": "DashboardClient-module__MP3H1a__resultCount",
   "searchSection": "DashboardClient-module__MP3H1a__searchSection",
+  "statCard": "DashboardClient-module__MP3H1a__statCard",
   "statLabel": "DashboardClient-module__MP3H1a__statLabel",
   "statRow": "DashboardClient-module__MP3H1a__statRow",
   "statValue": "DashboardClient-module__MP3H1a__statValue",
@@ -491,9 +493,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$mo
 ;
 ;
 ;
-function DashboardClient({ headers, rows, stats }) {
+function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: initialStats, fieldStats: initialFieldStats, totalStudents: initialTotalStudents }) {
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [activeFilter, setActiveFilter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [headers, setHeaders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialHeaders);
+    const [rows, setRows] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialRows);
+    const [stats, setStats] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialStats);
+    const [fieldStats, setFieldStats] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialFieldStats);
+    const [totalStudents, setTotalStudents] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialTotalStudents);
+    // Auto-refresh data every 3 seconds
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const fetchData = async ()=>{
+            try {
+                const response = await fetch('/api/data');
+                if (response.ok) {
+                    const data = await response.json();
+                    setHeaders(data.headers);
+                    setRows(data.rows);
+                    setStats(data.stats);
+                    setFieldStats(data.fieldStats);
+                    setTotalStudents(data.totalStudents);
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        const interval = setInterval(fetchData, 5000); // Fetch every 5 seconds
+        return ()=>clearInterval(interval); // Cleanup on unmount
+    }, []);
     const filteredRows = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         let result = rows;
         // Apply status filter
@@ -502,8 +529,6 @@ function DashboardClient({ headers, rows, stats }) {
                 const rowText = row.join(' ').toLowerCase();
                 if (activeFilter === 'approved') {
                     return rowText.includes('approved') || rowText.includes('confirmed');
-                } else if (activeFilter === 'pending') {
-                    return rowText.includes('pending');
                 } else if (activeFilter === 'notSubmitted') {
                     return rowText.includes('not submitted') || rowText.includes('not paid');
                 }
@@ -526,8 +551,43 @@ function DashboardClient({ headers, rows, stats }) {
     const handleFilterClick = (filterType)=>{
         setActiveFilter(activeFilter === filterType ? null : filterType);
     };
+    const handleExport = ()=>{
+        // Create CSV content
+        const csvContent = [
+            headers.join(','),
+            ...filteredRows.map((row)=>row.map((cell)=>`"${cell}"`).join(','))
+        ].join('\n');
+        // Create download link
+        const blob = new Blob([
+            csvContent
+        ], {
+            type: 'text/csv;charset=utf-8;'
+        });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', `convocation-status-${new Date().toISOString().split('T')[0]}.csv`);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chartSection,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusChart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    stats: stats
+                }, void 0, false, {
+                    fileName: "[project]/app/DashboardClient.js",
+                    lineNumber: 100,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/DashboardClient.js",
+                lineNumber: 99,
+                columnNumber: 13
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statsGrid,
                 children: [
@@ -540,7 +600,7 @@ function DashboardClient({ headers, rows, stats }) {
                         isActive: activeFilter === null
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 55,
+                        lineNumber: 105,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -552,19 +612,7 @@ function DashboardClient({ headers, rows, stats }) {
                         isActive: activeFilter === 'approved'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 63,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        label: "Pending",
-                        value: stats.pending,
-                        icon: "⏳",
-                        color: "orange",
-                        onClick: ()=>handleFilterClick('pending'),
-                        isActive: activeFilter === 'pending'
-                    }, void 0, false, {
-                        fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 71,
+                        lineNumber: 113,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -576,164 +624,13 @@ function DashboardClient({ headers, rows, stats }) {
                         isActive: activeFilter === 'notSubmitted'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 79,
+                        lineNumber: 121,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 54,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chartsGrid,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusChart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        stats: stats
-                    }, void 0, false, {
-                        fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 91,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chartContainer,
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chartTitle,
-                                children: "Quick Stats"
-                            }, void 0, false, {
-                                fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 93,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statsInfo,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statRow,
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
-                                                children: "Total Students"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 96,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
-                                                children: stats.total
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 97,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/DashboardClient.js",
-                                        lineNumber: 95,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statRow,
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
-                                                children: "Approval Rate"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 100,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
-                                                children: [
-                                                    stats.total > 0 ? Math.round(stats.approved / stats.total * 100) : 0,
-                                                    "%"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 101,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/DashboardClient.js",
-                                        lineNumber: 99,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statRow,
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
-                                                children: "Pending Rate"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 106,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
-                                                children: [
-                                                    stats.total > 0 ? Math.round(stats.pending / stats.total * 100) : 0,
-                                                    "%"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 107,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/DashboardClient.js",
-                                        lineNumber: 105,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statRow,
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
-                                                children: "Incomplete"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 112,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
-                                                children: [
-                                                    stats.total > 0 ? Math.round(stats.notSubmitted / stats.total * 100) : 0,
-                                                    "%"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/DashboardClient.js",
-                                                lineNumber: 113,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/DashboardClient.js",
-                                        lineNumber: 111,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 94,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 92,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 90,
+                lineNumber: 104,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -744,40 +641,58 @@ function DashboardClient({ headers, rows, stats }) {
                         placeholder: "Search by name or registration number..."
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 123,
+                        lineNumber: 133,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].resultCount,
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].actions,
                         children: [
                             activeFilter && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].filterBadge,
                                 children: [
                                     "Filtered: ",
-                                    activeFilter === 'approved' ? 'Approved' : activeFilter === 'pending' ? 'Pending' : 'Not Submitted',
+                                    activeFilter === 'approved' ? 'Approved' : 'Not Submitted',
                                     " •",
                                     ' '
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 129,
+                                lineNumber: 139,
                                 columnNumber: 25
                             }, this),
-                            "Showing ",
-                            filteredRows.length,
-                            " of ",
-                            rows.length,
-                            " students"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].resultCount,
+                                children: [
+                                    "Showing ",
+                                    filteredRows.length,
+                                    " of ",
+                                    rows.length,
+                                    " students"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/DashboardClient.js",
+                                lineNumber: 143,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: handleExport,
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].exportBtn,
+                                children: "📥 Export CSV"
+                            }, void 0, false, {
+                                fileName: "[project]/app/DashboardClient.js",
+                                lineNumber: 146,
+                                columnNumber: 21
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 127,
+                        lineNumber: 137,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 122,
+                lineNumber: 132,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -785,7 +700,7 @@ function DashboardClient({ headers, rows, stats }) {
                 rows: filteredRows
             }, void 0, false, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 140,
+                lineNumber: 153,
                 columnNumber: 13
             }, this)
         ]

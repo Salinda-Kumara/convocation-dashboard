@@ -5,15 +5,12 @@ import styles from './StatusChart.module.css';
 
 const COLORS = {
     'Approved': '#10b981',
-    'Pending': '#f59e0b',
     'Not Submitted': '#ef4444',
-    'Other': '#64748b'
 };
 
 export default function StatusChart({ stats }) {
     const data = [
         { name: 'Approved', value: stats.approved },
-        { name: 'Pending', value: stats.pending },
         { name: 'Not Submitted', value: stats.notSubmitted },
     ];
 

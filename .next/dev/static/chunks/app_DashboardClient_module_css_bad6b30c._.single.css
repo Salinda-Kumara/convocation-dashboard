@@ -1,9 +1,6 @@
 /* [project]/app/DashboardClient.module.css [app-client] (css) */
-.DashboardClient-module__MP3H1a__topSection {
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
+.DashboardClient-module__MP3H1a__chartSection {
   margin-bottom: 2rem;
-  display: grid;
 }
 
 .DashboardClient-module__MP3H1a__quickStatsContainer {
@@ -140,7 +137,7 @@
 }
 
 @media (max-width: 768px) {
-  .DashboardClient-module__MP3H1a__topSection, .DashboardClient-module__MP3H1a__statsGrid, .DashboardClient-module__MP3H1a__chartsGrid {
+  .DashboardClient-module__MP3H1a__statsGrid, .DashboardClient-module__MP3H1a__chartsGrid {
     grid-template-columns: 1fr;
   }
 

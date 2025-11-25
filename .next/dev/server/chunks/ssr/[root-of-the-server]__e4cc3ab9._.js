@@ -249,7 +249,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$page$2e$module$2e$css
 ;
 ;
 ;
-const revalidate = 60; // Revalidate every 60 seconds
+const revalidate = 3; // Revalidate every 3 seconds
 async function Home() {
     const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$googleSheets$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSheetData"])();
     const headers = data.length > 0 ? data[0] : [];

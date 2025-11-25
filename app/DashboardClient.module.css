@@ -1,7 +1,4 @@
-.topSection {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+.chartSection {
     margin-bottom: 2rem;
 }
 
@@ -137,10 +134,6 @@
 }
 
 @media (max-width: 768px) {
-    .topSection {
-        grid-template-columns: 1fr;
-    }
-
     .statsGrid {
         grid-template-columns: 1fr;
     }

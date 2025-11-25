@@ -2,7 +2,7 @@ import { getSheetData } from '@/lib/googleSheets';
 import DashboardClient from './DashboardClient';
 import styles from './page.module.css';
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const revalidate = 3; // Revalidate every 3 seconds
 
 export default async function Home() {
     const data = await getSheetData();

@@ -1,16 +1,43 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import StatsCard from '@/components/StatsCard';
 import SearchBar from '@/components/SearchBar';
 import DataTable from '@/components/DataTable';
 import StatusChart from '@/components/StatusChart';
-import SummaryInsights from '@/components/SummaryInsights';
 import styles from './DashboardClient.module.css';
 
-export default function DashboardClient({ headers, rows, stats, fieldStats, totalStudents }) {
+export default function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: initialStats, fieldStats: initialFieldStats, totalStudents: initialTotalStudents }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [activeFilter, setActiveFilter] = useState(null);
+    const [headers, setHeaders] = useState(initialHeaders);
+    const [rows, setRows] = useState(initialRows);
+    const [stats, setStats] = useState(initialStats);
+    const [fieldStats, setFieldStats] = useState(initialFieldStats);
+    const [totalStudents, setTotalStudents] = useState(initialTotalStudents);
+
+    // Auto-refresh data every 3 seconds
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/data');
+                if (response.ok) {
+                    const data = await response.json();
+                    setHeaders(data.headers);
+                    setRows(data.rows);
+                    setStats(data.stats);
+                    setFieldStats(data.fieldStats);
+                    setTotalStudents(data.totalStudents);
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        const interval = setInterval(fetchData, 5000); // Fetch every 5 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
 
     const filteredRows = useMemo(() => {
         let result = rows;
@@ -68,13 +95,8 @@ export default function DashboardClient({ headers, rows, stats, fieldStats, tota
 
     return (
         <>
-            {/* Top Section: Summary Insights + Status Chart */}
-            <div className={styles.topSection}>
-                <SummaryInsights
-                    stats={stats}
-                    fieldStats={fieldStats}
-                    totalStudents={totalStudents}
-                />
+            {/* Status Chart */}
+            <div className={styles.chartSection}>
                 <StatusChart stats={stats} />
             </div>
 

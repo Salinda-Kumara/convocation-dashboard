@@ -1,0 +1,134 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+import StatsCard from '@/components/StatsCard';
+import SearchBar from '@/components/SearchBar';
+import DataTable from '@/components/DataTable';
+import StatusChart from '@/components/StatusChart';
+import SummaryInsights from '@/components/SummaryInsights';
+import styles from './DashboardClient.module.css';
+
+export default function DashboardClient({ headers, rows, stats, fieldStats, totalStudents }) {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [activeFilter, setActiveFilter] = useState(null);
+
+    const filteredRows = useMemo(() => {
+        let result = rows;
+
+        // Apply status filter
+        if (activeFilter) {
+            result = result.filter(row => {
+                const rowText = row.join(' ').toLowerCase();
+
+                if (activeFilter === 'approved') {
+                    return rowText.includes('approved') || rowText.includes('confirmed');
+                } else if (activeFilter === 'notSubmitted') {
+                    return rowText.includes('not submitted') || rowText.includes('not paid');
+                }
+
+                return true;
+            });
+        }
+
+        // Apply search filter
+        if (searchTerm) {
+            result = result.filter(row => {
+                const searchLower = searchTerm.toLowerCase();
+                return row.some(cell =>
+                    cell && cell.toString().toLowerCase().includes(searchLower)
+                );
+            });
+        }
+
+        return result;
+    }, [rows, searchTerm, activeFilter]);
+
+    const handleFilterClick = (filterType) => {
+        setActiveFilter(activeFilter === filterType ? null : filterType);
+    };
+
+    const handleExport = () => {
+        // Create CSV content
+        const csvContent = [
+            headers.join(','),
+            ...filteredRows.map(row => row.map(cell => `"${cell}"`).join(','))
+        ].join('\n');
+
+        // Create download link
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', `convocation-status-${new Date().toISOString().split('T')[0]}.csv`);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    return (
+        <>
+            {/* Top Section: Summary Insights + Status Chart */}
+            <div className={styles.topSection}>
+                <SummaryInsights
+                    stats={stats}
+                    fieldStats={fieldStats}
+                    totalStudents={totalStudents}
+                />
+                <StatusChart stats={stats} />
+            </div>
+
+            {/* Stats Grid - Moved above table */}
+            <div className={styles.statsGrid}>
+                <StatsCard
+                    label="Total Students"
+                    value={stats.total}
+                    icon="👥"
+                    color="blue"
+                    onClick={() => setActiveFilter(null)}
+                    isActive={activeFilter === null}
+                />
+                <StatsCard
+                    label="Approved"
+                    value={stats.approved}
+                    icon="✓"
+                    color="green"
+                    onClick={() => handleFilterClick('approved')}
+                    isActive={activeFilter === 'approved'}
+                />
+                <StatsCard
+                    label="Not Submitted"
+                    value={stats.notSubmitted}
+                    icon="✗"
+                    color="red"
+                    onClick={() => handleFilterClick('notSubmitted')}
+                    isActive={activeFilter === 'notSubmitted'}
+                />
+            </div>
+
+            {/* Search Bar */}
+            <div className={styles.searchSection}>
+                <SearchBar
+                    onSearch={setSearchTerm}
+                    placeholder="Search by name or registration number..."
+                />
+                <div className={styles.actions}>
+                    {activeFilter && (
+                        <span className={styles.filterBadge}>
+                            Filtered: {activeFilter === 'approved' ? 'Approved' : 'Not Submitted'} •{' '}
+                        </span>
+                    )}
+                    <span className={styles.resultCount}>
+                        Showing {filteredRows.length} of {rows.length} students
+                    </span>
+                    <button onClick={handleExport} className={styles.exportBtn}>
+                        📥 Export CSV
+                    </button>
+                </div>
+            </div>
+
+            {/* Data Table */}
+            <DataTable headers={headers} rows={filteredRows} />
+        </>
+    );
+}

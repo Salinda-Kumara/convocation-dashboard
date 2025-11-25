@@ -1,0 +1,1568 @@
+[00:00:02.630] Server  LOG      ✓ Ready in 1853ms
+[00:00:05.725] Server  LOG      ○ Compiling / ...
+[00:00:06.141] Server  ERROR    ⨯ ./lib/googleSheets.js:13:20
+Parsing ecmascript source code failed
+  11 |             spreadsheetId,
+  12 |             range,
+> 13 |             import { google } from 'googleapis';
+     |                    ^
+  14 |
+  15 |             export async function getSheetData() {
+  16 |             try {
+
+Unexpected token `{`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import trace:
+  Server Component:
+    ./lib/googleSheets.js
+    ./app/page.js
+
+
+[00:00:09.591] Browser ERROR   uncaughtError: Error: ./lib/googleSheets.js:13:20
+Parsing ecmascript source code failed
+  11 |             spreadsheetId,
+  12 |             range,
+> 13 |             import { google } from 'googleapis';
+     |                    ^
+  14 |
+  15 |             export async function getSheetData() {
+  16 |             try {
+
+Unexpected token `{`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import trace:
+  Server Component:
+    ./lib/googleSheets.js
+    ./app/page.js
+
+
+[00:00:09.865] Browser ERROR   ./lib/googleSheets.js:13:20
+Parsing ecmascript source code failed
+  11 |             spreadsheetId,
+  12 |             range,
+> 13 |             import { google } from 'googleapis';
+     |                    ^
+  14 |
+  15 |             export async function getSheetData() {
+  16 |             try {
+
+Unexpected token `{`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import trace:
+  Server Component:
+    ./lib/googleSheets.js
+    ./app/page.js
+[00:00:09.865] Browser ERROR   ./lib/googleSheets.js:13:20
+Parsing ecmascript source code failed
+  11 |             spreadsheetId,
+  12 |             range,
+> 13 |             import { google } from 'googleapis';
+     |                    ^
+  14 |
+  15 |             export async function getSheetData() {
+  16 |             try {
+
+Unexpected token `{`. Expected ... , *,  (, [, :, , ?, = or an identifier
+
+Import trace:
+  Server Component:
+    ./lib/googleSheets.js
+    ./app/page.js
+[00:01:09.249] Server  LOG      ✓ Compiled in 3.6s
+[00:01:13.325] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\node_modules_1b81385d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:13.328] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\[root-of-the-server]__301d1af9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:13.331] Server  ERROR   Error fetching sheet data: Error: API key not valid. Please pass a valid API key.
+[00:01:13.333] Server  ERROR   Error response data: "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"errors\": [\n      {\n        \"message\": \"API key not valid. Please pass a valid API key.\",\n        \"domain\": \"global\",\n        \"reason\": \"badRequest\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"API_KEY_INVALID\",\n        \"domain\": \"googleapis.com\",\n        \"metadata\": {\n          \"service\": \"sheets.googleapis.com\"\n        }\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\n        \"locale\": \"en-US\",\n        \"message\": \"API key not valid. Please pass a valid API key.\"\n      }\n    ]\n  }\n}"
+[00:01:13.335] Server  LOG     Debug Info: {}
+[00:01:13.832] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:36.273] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\node_modules_1b81385d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:36.275] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\[root-of-the-server]__301d1af9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:36.276] Server  ERROR   Error fetching sheet data: Error: API key not valid. Please pass a valid API key.
+[00:02:36.277] Server  ERROR   Error response data: "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"errors\": [\n      {\n        \"message\": \"API key not valid. Please pass a valid API key.\",\n        \"domain\": \"global\",\n        \"reason\": \"badRequest\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"API_KEY_INVALID\",\n        \"domain\": \"googleapis.com\",\n        \"metadata\": {\n          \"service\": \"sheets.googleapis.com\"\n        }\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\n        \"locale\": \"en-US\",\n        \"message\": \"API key not valid. Please pass a valid API key.\"\n      }\n    ]\n  }\n}"
+[00:02:36.279] Server  LOG     Debug Info: {}
+[00:02:36.603] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:58.192] Server  LOG        Reload env: .env.local
+[00:04:00.000] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\node_modules_1b81385d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:00.509] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\node_modules_googleapis_build_src_apis_457c864e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:00.513] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\[root-of-the-server]__301d1af9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:00.515] Server  ERROR   Error fetching sheet data: Error: Missing required parameters: spreadsheetId
+[00:04:00.519] Server  LOG     Debug Info: {}
+[00:29:52.263] Server  LOG      ✓ Compiled in 419ms
+[00:29:54.465] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:30:14.397] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:14.400] Server  LOG      ✓ Compiled in 96ms
+[00:30:16.483] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\[root-of-the-server]__da7be2bb._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:30:16.485] Server  ERROR    ⨯ ReferenceError: React is not defined
+[00:30:16.812] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:17.391] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:30:17.962] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:17.982] Server  LOG      ✓ Compiled in 132ms
+[00:30:18.400] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_globals_71f961d1.css
+[00:30:18.895] Server  ERROR   D:\Project\convocation-status Dashboard\.next\dev\server\chunks\ssr\[root-of-the-server]__da7be2bb._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:30:18.898] Server  ERROR    ⨯ ReferenceError: React is not defined
+[00:30:19.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:19.394] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:30:20.069] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:20.088] Server  LOG      ✓ Compiled in 111ms
+[00:30:24.022] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:36.216] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:37.089] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299652"
+                        >
+                          ...
+                            <div className="DashboardC...">
+                              <SearchBar onSearch={function bound dispatchSetState} placeholder="Search by ...">
+                                <div className="SearchBar-...">
+                                  <input
+                                    type="text"
+                                    value=""
+                                    onChange={function handleChange}
+                                    placeholder="Search by name or registration number..."
+                                    className="SearchBar-module__4gEqOG__searchInput"
+-                                   style={{caret-color:"transparent"}}
+                                  >
+                                  ...
+                              ...
+                  ...
+
+[00:49:18.231] Server  LOG      ✓ Compiled in 47ms
+[00:49:28.358] Server  LOG      ✓ Compiled in 69ms
+[00:50:07.867] Server  LOG      ✓ Compiled in 30ms
+[00:50:23.324] Server  LOG      ✓ Compiled in 7s
+[00:59:02.447] Browser ERROR   ./app/page.js:2:10
+Ecmascript file had an error
+  1 | import { getSheetData } from '@/lib/googleSheets';
+> 2 | import { getSheetData } from '@/lib/googleSheets';
+    |          ^^^^^^^^^^^^
+  3 | import DashboardClient from './DashboardClient';
+  4 | import styles from './page.module.css';
+  5 |
+
+the name `getSheetData` is defined multiple times
+[00:59:03.406] Browser ERROR   ./app/page.js:2:10
+Ecmascript file had an error
+  1 | import { getSheetData } from '@/lib/googleSheets';
+> 2 | import { getSheetData } from '@/lib/googleSheets';
+    |          ^^^^^^^^^^^^
+  3 | import DashboardClient from './DashboardClient';
+  4 | import styles from './page.module.css';
+  5 |
+
+the name `getSheetData` is defined multiple times
+[00:59:05.684] Server  LOG      ✓ Compiled in 1291ms
+[00:59:05.903] Browser ERROR   ./app/page.js:2:10
+Ecmascript file had an error
+  1 | import { getSheetData } from '@/lib/googleSheets';
+> 2 | import { getSheetData } from '@/lib/googleSheets';
+    |          ^^^^^^^^^^^^
+  3 | import DashboardClient from './DashboardClient';
+  4 | import styles from './page.module.css';
+  5 |
+
+the name `getSheetData` is defined multiple times
+[00:59:06.398] Browser ERROR   ./app/page.js:2:10
+Ecmascript file had an error
+  1 | import { getSheetData } from '@/lib/googleSheets';
+> 2 | import { getSheetData } from '@/lib/googleSheets';
+    |          ^^^^^^^^^^^^
+  3 | import DashboardClient from './DashboardClient';
+  4 | import styles from './page.module.css';
+  5 |
+
+the name `getSheetData` is defined multiple times
+[00:59:29.899] Server  LOG      ✓ Compiled in 156ms
+[00:59:32.283] Browser ERROR   uncaughtError: TypeError: Cannot convert undefined or null to object
+[00:59:32.284] Browser ERROR   uncaughtError: TypeError: Cannot convert undefined or null to object
+[00:59:32.324] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:59:32.392] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:59:32.402] Server  LOG      ✓ Compiled in 11ms
+[00:59:33.858] Browser ERROR   uncaughtError: TypeError: Cannot convert undefined or null to object
+[00:59:33.862] Browser ERROR   uncaughtError: TypeError: Cannot convert undefined or null to object
+[00:59:38.331] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:38.474] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:39.412] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299652"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:24:20 PM
+-                                 11/25/2025, 5:24:19 PM
+                              ...
+                  ...
+
+[00:59:40.450] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="page.js">
+                <SegmentTrieNode>
+                <Home>
+                  <main className="page-modul...">
+                    <div className="page-modul...">
+                      <div>
+                      <DashboardClient headers={[...]} rows={[...]} stats={{total:107, ...}} fieldStats={{...}} ...>
+                        <SummaryInsights stats={{total:107, ...}} fieldStats={{...}} totalStudents={107}>
+                          <div className="SummaryIns...">
+                            <div className="SummaryIns...">
+                              <h3>
+                              <div className="SummaryIns...">
++                               11/25/2025, 5:24:20 PM
+-                               11/25/2025, 5:24:18 PM
+                            ...
+                        ...
+              ...
+            ...
+
+[01:00:03.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:04.817] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          <body
+-                           className="antigravity-scroll-lock"
+                          >
+                            ...
+                              <div className="SummaryIns...">
+                                <div className="SummaryIns...">
+                                  <h3>
+                                  <div className="SummaryIns...">
++                                   11/25/2025, 5:24:46 PM
+-                                   11/25/2025, 5:24:44 PM
+                                ...
+                  ...
+
+[01:06:18.011] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:06:18.820] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:31:00 PM
+-                                 11/25/2025, 5:30:58 PM
+                              ...
+                  ...
+
+[01:07:52.610] Server  LOG      ✓ Compiled in 373ms
+[01:07:52.826] Browser ERROR   uncaughtError: ReferenceError: CompletionChart is not defined
+[01:07:52.833] Browser ERROR   uncaughtError: ReferenceError: CompletionChart is not defined
+[01:07:53.399] Browser ERROR   uncaughtError: ReferenceError: CompletionChart is not defined
+[01:08:05.032] Server  LOG      ✓ Compiled in 58ms
+[01:08:05.097] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:08:05.111] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:08:10.370] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:08:14.616] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:15.563] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:16.080] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:16.611] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:32:57 PM
+-                                 11/25/2025, 5:32:55 PM
+                              ...
+                  ...
+
+[01:08:18.054] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="page.js">
+                <SegmentTrieNode>
+                <Home>
+                  <main className="page-modul...">
+                    <div className="page-modul...">
+                      <div>
+                      <DashboardClient headers={[...]} rows={[...]} stats={{total:107, ...}} fieldStats={{...}} ...>
+                        <SummaryInsights stats={{total:107, ...}} fieldStats={{...}} totalStudents={107}>
+                          <div className="SummaryIns...">
+                            <div className="SummaryIns...">
+                              <h3>
+                              <div className="SummaryIns...">
++                               11/25/2025, 5:32:57 PM
+-                               11/25/2025, 5:32:55 PM
+                            ...
+                        ...
+              ...
+            ...
+
+[01:08:18.344] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299652"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:32:58 PM
+-                                 11/25/2025, 5:32:56 PM
+                              ...
+                  ...
+
+[01:13:02.217] Server  LOG      ✓ Compiled in 139ms
+[01:17:01.330] Server  LOG      ✓ Compiled in 249ms
+[01:17:13.315] Server  LOG      ✓ Compiled in 258ms
+[01:17:22.665] Server  LOG      ✓ Compiled in 205ms
+[01:17:22.794] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:17:22.933] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:17:23.399] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:17:29.281] Server  LOG      ✓ Compiled in 50ms
+[01:17:29.389] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:17:29.390] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:17:29.420] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:08.106] Server  ERROR    ⨯ ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+
+[01:18:08.279] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:08.284] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:08.399] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.169] Browser ERROR   uncaughtError: Error: ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+
+[01:18:09.336] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.355] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.403] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.403] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.403] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:09.467] Browser ERROR   ./components/StatusChart.js:8:17
+Parsing ecmascript source code failed
+   6 | const COLORS = {
+   7 |     'Approved': '#10b981',
+>  8 |     'use client';
+     |                 ^
+   9 |
+  10 |     import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+  11 |     import styles from './StatusChart.module.css';
+
+Unexpected token `;`. Expected identifier
+
+Import traces:
+  Client Component Browser:
+    ./components/StatusChart.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/StatusChart.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[01:18:20.997] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:18:21.005] Server  LOG      ✓ Compiled in 185ms
+[01:18:22.937] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:18:23.144] Server  LOG      ✓ Compiled in 4ms
+[01:18:26.495] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:27.423] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:43:08 PM
+-                                 11/25/2025, 5:43:07 PM
+                              ...
+                  ...
+
+[01:19:28.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:19:29.230] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:44:10 PM
+-                                 11/25/2025, 5:44:09 PM
+                              ...
+                  ...
+
+[01:20:43.077] Server  LOG      ✓ Compiled in 67ms
+[01:21:02.393] Server  LOG      ✓ Compiled in 77ms
+[01:21:45.450] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:45.777] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                  ...
+
+[01:27:40.901] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:41.623] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:52:23 PM
+-                                 11/25/2025, 5:52:22 PM
+                              ...
+                  ...
+
+[01:31:16.620] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:29.889] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:30.556] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:56:12 PM
+-                                 11/25/2025, 5:56:11 PM
+                              ...
+                  ...
+
+[01:32:11.144] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:32:11.625] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:56:53 PM
+-                                 11/25/2025, 5:56:52 PM
+                              ...
+                  ...
+
+[01:32:29.175] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:32:29.555] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:57:11 PM
+-                                 11/25/2025, 5:57:10 PM
+                              ...
+                  ...
+
+[01:32:37.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:32:37.739] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:57:19 PM
+-                                 11/25/2025, 5:57:18 PM
+                              ...
+                  ...
+
+[01:33:42.266] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:33:42.870] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:58:24 PM
+-                                 11/25/2025, 5:58:23 PM
+                              ...
+                  ...
+
+[01:34:04.640] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:34:05.097] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                  ...
+
+[01:35:04.944] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:35:05.394] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 5:59:47 PM
+-                                 11/25/2025, 5:59:46 PM
+                              ...
+                  ...
+
+[01:44:59.245] Server  LOG      ✓ Compiled in 51ms
+[01:45:05.493] Server  LOG      ✓ Compiled in 188ms
+[01:45:06.231] Server  LOG      ✓ Compiled in 123ms
+[01:47:44.792] Server  LOG      ✓ Compiled in 97ms
+[01:49:53.258] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:54.243] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 6:14:35 PM
+-                                 11/25/2025, 6:14:34 PM
+                              ...
+                  ...
+
+[01:50:20.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:50:21.684] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 6:15:03 PM
+-                                 11/25/2025, 6:15:02 PM
+                              ...
+                  ...
+
+[01:52:38.919] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:52:39.616] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 6:17:21 PM
+-                                 11/25/2025, 6:17:20 PM
+                              ...
+                  ...
+
+[01:53:57.250] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:53:57.552] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="314299656"
+                        >
+                          ...
+                            <div className="SummaryIns...">
+                              <div className="SummaryIns...">
+                                <h3>
+                                <div className="SummaryIns...">
++                                 11/25/2025, 6:18:39 PM
+-                                 11/25/2025, 6:18:38 PM
+                              ...
+                  ...
+

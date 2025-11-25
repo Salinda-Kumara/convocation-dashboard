@@ -1,0 +1,39 @@
+/* [project]/components/SearchBar.module.css [app-client] (css) */
+.SearchBar-module__4gEqOG__searchContainer {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.SearchBar-module__4gEqOG__searchInput {
+  border: 1px solid var(--border);
+  width: 100%;
+  color: var(--foreground);
+  background: #ffffff0d;
+  border-radius: .75rem;
+  padding: .875rem 1rem .875rem 3rem;
+  font-size: .95rem;
+  transition: all .2s;
+}
+
+.SearchBar-module__4gEqOG__searchInput:focus {
+  border-color: var(--primary);
+  background: #ffffff14;
+  outline: none;
+  box-shadow: 0 0 0 3px #3b82f61a;
+}
+
+.SearchBar-module__4gEqOG__searchInput::placeholder {
+  color: var(--secondary);
+}
+
+.SearchBar-module__4gEqOG__searchIcon {
+  color: var(--secondary);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=components_SearchBar_module_css_bad6b30c._.single.css.map*/

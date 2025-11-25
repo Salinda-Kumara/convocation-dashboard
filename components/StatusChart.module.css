@@ -1,0 +1,21 @@
+.chartContainer {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.chartTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+    text-align: center;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 600;
+}

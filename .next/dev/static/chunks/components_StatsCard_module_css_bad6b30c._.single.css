@@ -1,0 +1,101 @@
+/* [project]/components/StatsCard.module.css [app-client] (css) */
+.StatsCard-module__PjJ0xW__card {
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.StatsCard-module__PjJ0xW__card:before {
+  content: "";
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  opacity: 0;
+  height: 4px;
+  transition: opacity .2s, height .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.StatsCard-module__PjJ0xW__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px #0003;
+}
+
+.StatsCard-module__PjJ0xW__card:hover:before {
+  opacity: 1;
+}
+
+.StatsCard-module__PjJ0xW__content {
+  z-index: 1;
+  position: relative;
+}
+
+.StatsCard-module__PjJ0xW__label {
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .5rem;
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.StatsCard-module__PjJ0xW__value {
+  color: var(--foreground);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.StatsCard-module__PjJ0xW__icon {
+  opacity: .1;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.StatsCard-module__PjJ0xW__blue:before {
+  background: linear-gradient(to right, #3b82f6, #6366f1);
+}
+
+.StatsCard-module__PjJ0xW__green:before {
+  background: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.StatsCard-module__PjJ0xW__orange:before {
+  background: linear-gradient(to right, #f59e0b, #f97316);
+}
+
+.StatsCard-module__PjJ0xW__red:before {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+.StatsCard-module__PjJ0xW__purple:before {
+  background: linear-gradient(to right, #8b5cf6, #a855f7);
+}
+
+.StatsCard-module__PjJ0xW__clickable {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.StatsCard-module__PjJ0xW__active {
+  border-color: #3b82f680;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px #0000004d;
+}
+
+.StatsCard-module__PjJ0xW__active:before {
+  opacity: 1;
+  height: 6px;
+}
+
+/*# sourceMappingURL=components_StatsCard_module_css_bad6b30c._.single.css.map*/

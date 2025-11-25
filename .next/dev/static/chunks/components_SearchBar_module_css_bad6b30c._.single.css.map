@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/SearchBar.module.css"],"sourcesContent":[".searchContainer {\r\n    position: relative;\r\n    width: 100%;\r\n    max-width: 400px;\r\n}\r\n\r\n.searchInput {\r\n    width: 100%;\r\n    padding: 0.875rem 1rem 0.875rem 3rem;\r\n    background: rgba(255, 255, 255, 0.05);\r\n    border: 1px solid var(--border);\r\n    border-radius: 0.75rem;\r\n    color: var(--foreground);\r\n    font-size: 0.95rem;\r\n    transition: all 0.2s ease;\r\n}\r\n\r\n.searchInput:focus {\r\n    outline: none;\r\n    border-color: var(--primary);\r\n    background: rgba(255, 255, 255, 0.08);\r\n    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);\r\n}\r\n\r\n.searchInput::placeholder {\r\n    color: var(--secondary);\r\n}\r\n\r\n.searchIcon {\r\n    position: absolute;\r\n    left: 1rem;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    color: var(--secondary);\r\n    pointer-events: none;\r\n}"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;;;;;AAWA;;;;;;;AAOA;;;;AAIA"}}]
+}

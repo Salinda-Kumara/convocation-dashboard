@@ -1,0 +1,109 @@
+.container {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.timestamp {
+    color: var(--secondary);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.insightsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.insightCard {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insightCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.insightIcon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.insightContent {
+    flex: 1;
+}
+
+.insightLabel {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.insightValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+}
+
+.insightDescription {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    line-height: 1.4;
+}
+
+.blue .insightValue {
+    color: #3b82f6;
+}
+
+.purple .insightValue {
+    color: #8b5cf6;
+}
+
+.orange .insightValue {
+    color: #f59e0b;
+}
+
+.cyan .insightValue {
+    color: #06b6d4;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .insightsGrid {
+        grid-template-columns: 1fr;
+    }
+}

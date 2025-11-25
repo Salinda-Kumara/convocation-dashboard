@@ -1,0 +1,43 @@
+.chartContainer {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.chartTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--foreground);
+    text-align: center;
+}
+
+.tooltip {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tooltipTitle {
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.tooltipItem {
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+}
+
+.tooltipCompletion {
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+}

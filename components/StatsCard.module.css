@@ -1,0 +1,96 @@
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    opacity: 0;
+    transition: opacity 0.2s ease, height 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    opacity: 0.1;
+}
+
+.blue::before {
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+}
+
+.green::before {
+    background: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.orange::before {
+    background: linear-gradient(to right, #f59e0b, #f97316);
+}
+
+.red::before {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+.purple::before {
+    background: linear-gradient(to right, #8b5cf6, #a855f7);
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.active {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.active::before {
+    opacity: 1;
+    height: 6px;
+}

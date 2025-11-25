@@ -1,0 +1,14 @@
+import './globals.css'
+
+export const metadata = {
+  title: 'Convocation Status Dashboard',
+  description: 'Dashboard for convocation registration status',
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
+}

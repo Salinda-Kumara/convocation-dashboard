@@ -46,11 +46,29 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
         if (activeFilter) {
             result = result.filter(row => {
                 const rowText = row.join(' ').toLowerCase();
+                const statusFields = row.slice(4); // Skip first 4 columns
 
-                if (activeFilter === 'approved') {
+                if (activeFilter === 'submitted') {
                     return rowText.includes('approved') || rowText.includes('confirmed');
+                } else if (activeFilter === 'allApproved') {
+                    // Check if ALL fields are approved/confirmed
+                    return statusFields.length > 0 && statusFields.every(field => {
+                        const fieldLower = (field || '').toLowerCase();
+                        return fieldLower.includes('approved') || fieldLower.includes('confirmed');
+                    });
                 } else if (activeFilter === 'notSubmitted') {
                     return rowText.includes('not submitted') || rowText.includes('not paid');
+                } else if (activeFilter === 'incomplete') {
+                    // Has at least one "not submitted" and at least one other status
+                    const hasNotSubmitted = statusFields.some(field => {
+                        const fieldLower = (field || '').toLowerCase();
+                        return fieldLower.includes('not submitted') || fieldLower.includes('not paid');
+                    });
+                    const hasOtherStatus = statusFields.some(field => {
+                        const fieldLower = (field || '').toLowerCase();
+                        return (fieldLower.includes('approved') || fieldLower.includes('confirmed') || fieldLower.includes('pending'));
+                    });
+                    return hasNotSubmitted && hasOtherStatus;
                 }
 
                 return true;
@@ -111,12 +129,28 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     isActive={activeFilter === null}
                 />
                 <StatsCard
-                    label="Approved"
-                    value={stats.approved}
+                    label="All Approved"
+                    value={stats.allApproved}
+                    icon="✓✓"
+                    color="purple"
+                    onClick={() => handleFilterClick('allApproved')}
+                    isActive={activeFilter === 'allApproved'}
+                />
+                <StatsCard
+                    label="Submitted"
+                    value={stats.submitted}
                     icon="✓"
                     color="green"
-                    onClick={() => handleFilterClick('approved')}
-                    isActive={activeFilter === 'approved'}
+                    onClick={() => handleFilterClick('submitted')}
+                    isActive={activeFilter === 'submitted'}
+                />
+                <StatsCard
+                    label="Incomplete"
+                    value={stats.incomplete}
+                    icon="⚠"
+                    color="yellow"
+                    onClick={() => handleFilterClick('incomplete')}
+                    isActive={activeFilter === 'incomplete'}
                 />
                 <StatsCard
                     label="Not Submitted"
@@ -137,7 +171,12 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 <div className={styles.actions}>
                     {activeFilter && (
                         <span className={styles.filterBadge}>
-                            Filtered: {activeFilter === 'approved' ? 'Approved' : 'Not Submitted'} •{' '}
+                            Filtered: {
+                                activeFilter === 'allApproved' ? 'All Approved' :
+                                    activeFilter === 'submitted' ? 'Submitted' :
+                                        activeFilter === 'incomplete' ? 'Incomplete' :
+                                            'Not Submitted'
+                            } •{' '}
                         </span>
                     )}
                     <span className={styles.resultCount}>

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/CompletionChart.module.css"],"sourcesContent":[".chartContainer {\r\n    background: var(--card-bg);\r\n    backdrop-filter: blur(10px);\r\n    border-radius: 1rem;\r\n    padding: 1.5rem;\r\n    border: 1px solid var(--border);\r\n}\r\n\r\n.chartTitle {\r\n    font-size: 1.25rem;\r\n    font-weight: 600;\r\n    margin-bottom: 1.5rem;\r\n    color: var(--foreground);\r\n    text-align: center;\r\n}\r\n\r\n.tooltip {\r\n    background: rgba(15, 23, 42, 0.95);\r\n    border: 1px solid rgba(148, 163, 184, 0.3);\r\n    border-radius: 0.5rem;\r\n    padding: 1rem;\r\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);\r\n}\r\n\r\n.tooltipTitle {\r\n    font-weight: 600;\r\n    color: var(--foreground);\r\n    margin-bottom: 0.5rem;\r\n    font-size: 0.95rem;\r\n}\r\n\r\n.tooltipItem {\r\n    font-size: 0.875rem;\r\n    margin: 0.25rem 0;\r\n}\r\n\r\n.tooltipCompletion {\r\n    font-weight: 600;\r\n    color: var(--primary);\r\n    margin-top: 0.5rem;\r\n    padding-top: 0.5rem;\r\n    border-top: 1px solid rgba(148, 163, 184, 0.2);\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;;AAQA;;;;;;;;AAQA;;;;;;;;AAQA;;;;;;;AAOA;;;;;AAKA"}}]
-}

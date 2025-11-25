@@ -1,4 +1,274 @@
-[00:00:01.031] Server  LOG      ✓ Ready in 631ms
-[00:00:13.010] Server  LOG      ○ Compiling / ...
-[00:00:19.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:28.080] Server  LOG      ○ Compiling /api/data ...
+[00:00:01.036] Server  LOG      ✓ Ready in 647ms
+[00:00:04.227] Server  LOG      ○ Compiling / ...
+[00:00:10.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.652] Server  LOG      ○ Compiling /api/data ...
+[00:01:07.798] Server  LOG      ✓ Compiled in 24ms
+[00:01:30.230] Server  LOG      ✓ Compiled in 32ms
+[00:02:38.920] Server  LOG      ✓ Compiled in 61ms
+[00:02:59.919] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:38.534] Server  LOG      ✓ Compiled in 42ms
+[00:03:39.430] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:03:41.397] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:03:45.459] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:03:51.398] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:03:56.396] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:01.397] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:06.395] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:11.395] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:16.394] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:21.393] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:04:26.399] Browser ERROR   ./app/DashboardClient.module.css:14:10
+Parsing CSS source code failed
+  12 | }
+  13 |
+> 14 | padding: 1.5rem;
+     |          ^
+  15 | border: 1px solid var(--border);
+  16 | }
+  17 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./app/DashboardClient.module.css [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/DashboardClient.module.css [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:05:05.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

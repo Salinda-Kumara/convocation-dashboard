@@ -71,6 +71,10 @@
     background: linear-gradient(to right, #f59e0b, #f97316);
 }
 
+.yellow::before {
+    background: linear-gradient(to right, #eab308, #f59e0b);
+}
+
 .red::before {
     background: linear-gradient(to right, #ef4444, #dc2626);
 }

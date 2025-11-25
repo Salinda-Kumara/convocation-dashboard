@@ -38,11 +38,11 @@ async function analyzeData() {
         console.log('\n=== COMPLETION ANALYSIS ===');
 
         // Analyze each status column
-        const statusColumns = headers.slice(3); // Skip first 3 columns (S.No, Reg, Name)
+        const statusColumns = headers.slice(4); // Skip first 4 columns (S.No, Reg, Name, Name Appeared)
         const analysis = {};
 
         statusColumns.forEach((header, index) => {
-            const colIndex = index + 3;
+            const colIndex = index + 4;
             const values = dataRows.map(row => row[colIndex] || '');
 
             const approved = values.filter(v => v.toLowerCase().includes('approved') || v.toLowerCase().includes('confirmed')).length;

@@ -254,14 +254,26 @@ async function GET() {
         // Calculate statistics
         const stats = {
             total: rows.length,
-            approved: 0,
+            submitted: 0,
+            allApproved: 0,
             pending: 0,
-            notSubmitted: 0
+            notSubmitted: 0,
+            incomplete: 0
         };
         rows.forEach((row)=>{
             const rowText = row.join(' ').toLowerCase();
+            const statusFields = row.slice(4); // Skip first 4 columns (S.No, Reg, Name, Name Appeared)
+            // Check if at least one field is approved/confirmed
             if (rowText.includes('approved') || rowText.includes('confirmed')) {
-                stats.approved++;
+                stats.submitted++;
+            }
+            // Check if ALL fields are approved/confirmed
+            const allFieldsApproved = statusFields.length > 0 && statusFields.every((field)=>{
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('approved') || fieldLower.includes('confirmed');
+            });
+            if (allFieldsApproved) {
+                stats.allApproved++;
             }
             if (rowText.includes('pending')) {
                 stats.pending++;
@@ -269,12 +281,24 @@ async function GET() {
             if (rowText.includes('not submitted') || rowText.includes('not paid')) {
                 stats.notSubmitted++;
             }
+            // Check if incomplete: has at least one "not submitted" and at least one other status
+            const hasNotSubmitted = statusFields.some((field)=>{
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('not submitted') || fieldLower.includes('not paid');
+            });
+            const hasOtherStatus = statusFields.some((field)=>{
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('approved') || fieldLower.includes('confirmed') || fieldLower.includes('pending');
+            });
+            if (hasNotSubmitted && hasOtherStatus) {
+                stats.incomplete++;
+            }
         });
         // Calculate field-by-field completion stats
         const fieldStats = {};
-        const statusColumns = headers.slice(3);
+        const statusColumns = headers.slice(4);
         statusColumns.forEach((header, index)=>{
-            const colIndex = index + 3;
+            const colIndex = index + 4;
             const values = rows.map((row)=>row[colIndex] || '');
             const approved = values.filter((v)=>v.toLowerCase().includes('approved') || v.toLowerCase().includes('confirmed')).length;
             const pending = values.filter((v)=>v.toLowerCase().includes('pending')).length;

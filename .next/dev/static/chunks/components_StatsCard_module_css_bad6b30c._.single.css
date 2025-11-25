@@ -73,6 +73,10 @@
   background: linear-gradient(to right, #f59e0b, #f97316);
 }
 
+.StatsCard-module__PjJ0xW__yellow:before {
+  background: linear-gradient(to right, #eab308, #f59e0b);
+}
+
 .StatsCard-module__PjJ0xW__red:before {
   background: linear-gradient(to right, #ef4444, #dc2626);
 }

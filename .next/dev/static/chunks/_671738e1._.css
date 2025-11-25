@@ -73,6 +73,10 @@
   background: linear-gradient(to right, #f59e0b, #f97316);
 }
 
+.StatsCard-module__PjJ0xW__yellow:before {
+  background: linear-gradient(to right, #eab308, #f59e0b);
+}
+
 .StatsCard-module__PjJ0xW__red:before {
   background: linear-gradient(to right, #ef4444, #dc2626);
 }
@@ -296,8 +300,8 @@
 }
 
 .DashboardClient-module__MP3H1a__statsGrid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
   margin-bottom: 2rem;
   display: grid;
 }

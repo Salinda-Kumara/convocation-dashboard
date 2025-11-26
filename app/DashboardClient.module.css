@@ -25,7 +25,6 @@
     border-radius: 0.5rem;
     border: 1px solid var(--border);
     flex: 0 0 200px;
-    /* Fixed width, don't grow or shrink */
     min-width: 200px;
 }
 
@@ -35,9 +34,7 @@
     gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
-    /* Space for scrollbar */
     scrollbar-width: thin;
-    /* Firefox */
 }
 
 .statsGrid::-webkit-scrollbar {
@@ -154,6 +151,18 @@
 }
 
 @media (max-width: 768px) {
+    .statsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow-x: visible;
+    }
+
+    .statCard {
+        flex: unset;
+        min-width: unset;
+        padding: 1rem;
+    }
+
     .chartsGrid {
         grid-template-columns: 1fr;
     }
@@ -170,5 +179,32 @@
 
     .exportBtn {
         width: 100%;
+    }
+
+    .chartContainer {
+        padding: 1rem;
+    }
+
+    .chartTitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .statCard {
+        padding: 0.875rem;
+    }
+
+    .searchSection {
+        gap: 0.75rem;
+    }
+
+    .actions {
+        gap: 0.75rem;
     }
 }

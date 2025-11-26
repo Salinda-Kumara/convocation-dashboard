@@ -7,7 +7,6 @@ __turbopack_context__.v({
   "card": "StatsCard-module__PjJ0xW__card",
   "clickable": "StatsCard-module__PjJ0xW__clickable",
   "content": "StatsCard-module__PjJ0xW__content",
-  "cyan": "StatsCard-module__PjJ0xW__cyan",
   "green": "StatsCard-module__PjJ0xW__green",
   "icon": "StatsCard-module__PjJ0xW__icon",
   "label": "StatsCard-module__PjJ0xW__label",
@@ -335,28 +334,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/app/DashboardClient.module.css [app-client] (css module)", ((__turbopack_context__) => {
-
-__turbopack_context__.v({
-  "actions": "DashboardClient-module__MP3H1a__actions",
-  "chartContainer": "DashboardClient-module__MP3H1a__chartContainer",
-  "chartSection": "DashboardClient-module__MP3H1a__chartSection",
-  "chartTitle": "DashboardClient-module__MP3H1a__chartTitle",
-  "chartsGrid": "DashboardClient-module__MP3H1a__chartsGrid",
-  "exportBtn": "DashboardClient-module__MP3H1a__exportBtn",
-  "filterBadge": "DashboardClient-module__MP3H1a__filterBadge",
-  "quickStatsContainer": "DashboardClient-module__MP3H1a__quickStatsContainer",
-  "quickStatsGrid": "DashboardClient-module__MP3H1a__quickStatsGrid",
-  "resultCount": "DashboardClient-module__MP3H1a__resultCount",
-  "searchSection": "DashboardClient-module__MP3H1a__searchSection",
-  "statCard": "DashboardClient-module__MP3H1a__statCard",
-  "statLabel": "DashboardClient-module__MP3H1a__statLabel",
-  "statRow": "DashboardClient-module__MP3H1a__statRow",
-  "statValue": "DashboardClient-module__MP3H1a__statValue",
-  "statsGrid": "DashboardClient-module__MP3H1a__statsGrid",
-  "statsInfo": "DashboardClient-module__MP3H1a__statsInfo",
-});
-}),
 "[project]/app/DashboardClient.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -369,7 +346,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/StatsCard.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SearchBar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/SearchBar.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/DataTable.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/app/DashboardClient.module.css [app-client] (css module)");
+(()=>{
+    const e = new Error("Cannot find module './DashboardClient.module.css'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -511,7 +492,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statsGrid,
+                className: styles.statsGrid,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         label: "Total Students",
@@ -604,7 +585,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].searchSection,
+                className: styles.searchSection,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SearchBar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         onSearch: setSearchTerm,
@@ -615,10 +596,10 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].actions,
+                        className: styles.actions,
                         children: [
                             activeFilter && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].filterBadge,
+                                className: styles.filterBadge,
                                 children: [
                                     "Filtered: ",
                                     activeFilter === 'allApproved' ? 'All Approved' : activeFilter === 'submitted' ? 'Submitted' : activeFilter === 'pending' ? 'Approval Pending' : activeFilter === 'incomplete' ? 'Incomplete' : 'Not Submitted',
@@ -631,7 +612,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].resultCount,
+                                className: styles.resultCount,
                                 children: [
                                     "Showing ",
                                     filteredRows.length,
@@ -646,7 +627,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: handleExport,
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].exportBtn,
+                                className: styles.exportBtn,
                                 children: "📥 Export CSV"
                             }, void 0, false, {
                                 fileName: "[project]/app/DashboardClient.js",
@@ -913,4 +894,4 @@ else {
 }),
 ]);
 
-//# sourceMappingURL=_ecab8956._.js.map
+//# sourceMappingURL=_c1606d34._.js.map

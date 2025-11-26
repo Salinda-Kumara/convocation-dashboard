@@ -154,6 +154,18 @@
 }
 
 @media (max-width: 768px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    overflow-x: visible;
+  }
+
+  .DashboardClient-module__MP3H1a__statCard {
+    flex: unset;
+    min-width: unset;
+    padding: 1rem;
+  }
+
   .DashboardClient-module__MP3H1a__chartsGrid {
     grid-template-columns: 1fr;
   }
@@ -165,6 +177,29 @@
 
   .DashboardClient-module__MP3H1a__exportBtn {
     width: 100%;
+  }
+
+  .DashboardClient-module__MP3H1a__chartContainer {
+    padding: 1rem;
+  }
+
+  .DashboardClient-module__MP3H1a__chartTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+  }
+
+  .DashboardClient-module__MP3H1a__statCard {
+    padding: .875rem;
+  }
+
+  .DashboardClient-module__MP3H1a__searchSection, .DashboardClient-module__MP3H1a__actions {
+    gap: .75rem;
   }
 }
 

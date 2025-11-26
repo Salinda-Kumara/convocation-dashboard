@@ -85,6 +85,10 @@
   background: linear-gradient(to right, #8b5cf6, #a855f7);
 }
 
+.StatsCard-module__PjJ0xW__cyan:before {
+  background: linear-gradient(to right, #06b6d4, #0891b2);
+}
+
 .StatsCard-module__PjJ0xW__clickable {
   cursor: pointer;
   -webkit-user-select: none;
@@ -107,6 +111,10 @@
     padding: 1rem;
   }
 
+  .StatsCard-module__PjJ0xW__label {
+    font-size: .7rem;
+  }
+
   .StatsCard-module__PjJ0xW__value {
     font-size: 1.5rem;
   }
@@ -114,6 +122,26 @@
   .StatsCard-module__PjJ0xW__icon {
     font-size: 2rem;
     right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .StatsCard-module__PjJ0xW__card {
+    padding: .875rem;
+  }
+
+  .StatsCard-module__PjJ0xW__label {
+    margin-bottom: .375rem;
+    font-size: .65rem;
+  }
+
+  .StatsCard-module__PjJ0xW__value {
+    font-size: 1.25rem;
+  }
+
+  .StatsCard-module__PjJ0xW__icon {
+    font-size: 1.5rem;
+    right: .75rem;
   }
 }
 

@@ -85,6 +85,10 @@
   background: linear-gradient(to right, #8b5cf6, #a855f7);
 }
 
+.StatsCard-module__PjJ0xW__cyan:before {
+  background: linear-gradient(to right, #06b6d4, #0891b2);
+}
+
 .StatsCard-module__PjJ0xW__clickable {
   cursor: pointer;
   -webkit-user-select: none;
@@ -107,6 +111,10 @@
     padding: 1rem;
   }
 
+  .StatsCard-module__PjJ0xW__label {
+    font-size: .7rem;
+  }
+
   .StatsCard-module__PjJ0xW__value {
     font-size: 1.5rem;
   }
@@ -114,6 +122,26 @@
   .StatsCard-module__PjJ0xW__icon {
     font-size: 2rem;
     right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .StatsCard-module__PjJ0xW__card {
+    padding: .875rem;
+  }
+
+  .StatsCard-module__PjJ0xW__label {
+    margin-bottom: .375rem;
+    font-size: .65rem;
+  }
+
+  .StatsCard-module__PjJ0xW__value {
+    font-size: 1.25rem;
+  }
+
+  .StatsCard-module__PjJ0xW__icon {
+    font-size: 1.5rem;
+    right: .75rem;
   }
 }
 
@@ -435,6 +463,18 @@
 }
 
 @media (max-width: 768px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    overflow-x: visible;
+  }
+
+  .DashboardClient-module__MP3H1a__statCard {
+    flex: unset;
+    min-width: unset;
+    padding: 1rem;
+  }
+
   .DashboardClient-module__MP3H1a__chartsGrid {
     grid-template-columns: 1fr;
   }
@@ -446,6 +486,29 @@
 
   .DashboardClient-module__MP3H1a__exportBtn {
     width: 100%;
+  }
+
+  .DashboardClient-module__MP3H1a__chartContainer {
+    padding: 1rem;
+  }
+
+  .DashboardClient-module__MP3H1a__chartTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .DashboardClient-module__MP3H1a__statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+  }
+
+  .DashboardClient-module__MP3H1a__statCard {
+    padding: .875rem;
+  }
+
+  .DashboardClient-module__MP3H1a__searchSection, .DashboardClient-module__MP3H1a__actions {
+    gap: .75rem;
   }
 }
 
@@ -502,20 +565,39 @@
 
 @media (max-width: 768px) {
   .page-module__E0kJGG__main {
-    padding: 1rem;
+    padding: .75rem;
   }
 
   .page-module__E0kJGG__container {
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .page-module__E0kJGG__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .page-module__E0kJGG__subtitle {
-    font-size: .95rem;
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-module__E0kJGG__main {
+    padding: .5rem;
+  }
+
+  .page-module__E0kJGG__container {
+    border-radius: .75rem;
+    padding: 1rem;
+  }
+
+  .page-module__E0kJGG__title {
+    font-size: 1.5rem;
+  }
+
+  .page-module__E0kJGG__subtitle {
+    font-size: .85rem;
   }
 }
 

@@ -1,0 +1,65 @@
+.toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.toggle:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    border-color: var(--primary);
+}
+
+.toggle:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.toggle:hover .icon {
+    transform: rotate(20deg);
+}
+
+@media (max-width: 768px) {
+    .toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}

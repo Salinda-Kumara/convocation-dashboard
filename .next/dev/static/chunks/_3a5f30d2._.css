@@ -215,6 +215,7 @@
 }
 
 .DataTable-module__K4GEfq__table tbody tr {
+  background-color: #0000;
   transition: background-color .2s;
 }
 
@@ -258,6 +259,12 @@
   color: #64748b;
   background: #64748b26;
   border: 1px solid #64748b4d;
+}
+
+.DataTable-module__K4GEfq__badgeBlue {
+  color: #3b82f6;
+  background: #3b82f626;
+  border: 1px solid #3b82f64d;
 }
 
 @media (max-width: 768px) {

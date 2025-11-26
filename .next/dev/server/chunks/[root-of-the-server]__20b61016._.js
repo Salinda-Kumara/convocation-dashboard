@@ -260,6 +260,14 @@ async function GET() {
             notSubmitted: 0,
             incomplete: 0
         };
+        // Define required columns for "All Approved" check
+        const requiredColumns = [
+            'Supplication Form',
+            'SAB Alumni Registration Form',
+            'Exit Interview Form',
+            'Finance Clearance Form',
+            'Convocation Payment'
+        ];
         rows.forEach((row)=>{
             const rowText = row.join(' ').toLowerCase();
             const statusFields = row.slice(4); // Skip first 4 columns (S.No, Reg, Name, Name Appeared)
@@ -267,12 +275,14 @@ async function GET() {
             if (rowText.includes('approved') || rowText.includes('confirmed')) {
                 stats.submitted++;
             }
-            // Check if ALL fields are approved/confirmed
-            const allFieldsApproved = statusFields.length > 0 && statusFields.every((field)=>{
-                const fieldLower = (field || '').toLowerCase();
-                return fieldLower.includes('approved') || fieldLower.includes('confirmed');
+            // Check if ALL REQUIRED fields are approved/confirmed
+            const requiredFieldsApproved = requiredColumns.every((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false; // Column doesn't exist
+                const fieldValue = (row[columnIndex] || '').toLowerCase();
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
             });
-            if (allFieldsApproved) {
+            if (requiredFieldsApproved) {
                 stats.allApproved++;
             }
             if (rowText.includes('pending')) {

@@ -1,11 +1,17 @@
-[00:00:23.103] Server  LOG      ✓ Ready in 11s
-[00:01:00.412] Server  LOG      ○ Compiling / ...
-[00:01:21.384] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:21.404] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.525] Server  LOG      ○ Compiling /api/data ...
-[00:15:35.341] Server  LOG      ✓ Compiled in 62ms
-[00:15:55.502] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:56.514] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:44.183] Server  LOG      ✓ Ready in 25.6s
+[00:00:47.509] Server  LOG      ○ Compiling / ...
+[00:01:13.865] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.254] Server  LOG      ○ Compiling /api/data ...
+[00:10:04.096] Server  LOG      ✓ Compiled in 107ms
+[00:14:06.108] Server  LOG      ✓ Compiled in 62ms
+[00:14:22.352] Server  LOG      ✓ Compiled in 36ms
+[00:16:24.247] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:49.828] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:14.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:00.291] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:21.704] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:53.830] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:54.840] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -35,224 +41,327 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="en"
--                         data-jetski-tab-id="314299791"
-                        >
-                          <body
--                           className="antigravity-scroll-lock"
-                          >
-                  ...
-
-[00:17:50.238] Server  LOG      ✓ Compiled in 54ms
-[00:18:03.606] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:04.226] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299791"
+-                         data-jetski-tab-id="314299871"
                         >
                   ...
 
-[00:18:26.847] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:27.344] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:20:59.194] Server  LOG      ✓ Compiled in 58ms
+[00:21:12.046] Server  LOG      ✓ Compiled in 49ms
+[00:22:21.696] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:09.480] Server  LOG      ✓ Compiled in 73ms
+[00:24:36.718] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:07.177] Server  LOG      ✓ Compiled in 158ms
+[00:26:07.447] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Invalid token in pseudo element: WhiteSpace(" ")
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-%s%s https://react.dev/link/hydration-mismatch 
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:07.975] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299791"
-                        >
-                  ...
+Invalid token in pseudo element: WhiteSpace(" ")
 
-[00:20:39.840] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:40.290] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:09.755] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Invalid token in pseudo element: WhiteSpace(" ")
 
-%s%s https://react.dev/link/hydration-mismatch 
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299791"
-                        >
-                  ...
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:09.848] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-[00:23:27.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:23:28.126] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+Invalid token in pseudo element: WhiteSpace(" ")
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:12.359] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-%s%s https://react.dev/link/hydration-mismatch 
+Invalid token in pseudo element: WhiteSpace(" ")
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299791"
-                        >
-                  ...
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-[00:28:18.649] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:28:18.905] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:13.887] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Invalid token in pseudo element: WhiteSpace(" ")
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-%s%s https://react.dev/link/hydration-mismatch 
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:14.794] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299791"
-                        >
-                  ...
+Invalid token in pseudo element: WhiteSpace(" ")
 
-[00:28:27.106] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:28:27.654] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:14.826] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Invalid token in pseudo element: WhiteSpace(" ")
 
-%s%s https://react.dev/link/hydration-mismatch 
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-jetski-tab-id="314299794"
-                        >
-                          <body
--                           className="antigravity-scroll-lock"
-                          >
-                  ...
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:17.232] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
 
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:17.241] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:19.722] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:19.722] Browser ERROR   ./components/DataTable.module.css:94:10
+Parsing CSS source code failed
+  92 | }
+  93 |
+> 94 | padding: 0.5rem;
+     |          ^
+  95 | font-size: 0.75rem;
+  96 | }
+  97 |
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Client Component Browser:
+    ./components/DataTable.module.css [Client Component Browser]
+    ./components/DataTable.js [Client Component Browser]
+    ./app/DashboardClient.js [Client Component Browser]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/DataTable.module.css [Client Component SSR]
+    ./components/DataTable.js [Client Component SSR]
+    ./app/DashboardClient.js [Client Component SSR]
+    ./app/DashboardClient.js [Server Component]
+    ./app/page.js [Server Component]
+[00:26:20.844] Server  LOG      ✓ Compiled in 115ms
+[00:26:54.322] Server  LOG      ✓ Compiled in 2ms

@@ -38,6 +38,15 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
         return () => clearInterval(interval); // Cleanup on unmount
     }, []);
 
+    // Define required columns for "All Approved" check
+    const requiredColumns = [
+        'Supplication Form',
+        'SAB Alumni Registration Form',
+        'Exit Interview Form',
+        'Finance Clearance Form',
+        'Convocation Payment'
+    ];
+
     const filteredRows = useMemo(() => {
         let result = rows;
 
@@ -50,10 +59,12 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 if (activeFilter === 'submitted') {
                     return rowText.includes('approved') || rowText.includes('confirmed');
                 } else if (activeFilter === 'allApproved') {
-                    // Check if ALL fields are approved/confirmed
-                    return statusFields.length > 0 && statusFields.every(field => {
-                        const fieldLower = (field || '').toLowerCase();
-                        return fieldLower.includes('approved') || fieldLower.includes('confirmed');
+                    // Check if ALL REQUIRED fields are approved/confirmed
+                    return requiredColumns.every(columnName => {
+                        const columnIndex = headers.indexOf(columnName);
+                        if (columnIndex === -1) return false; // Column doesn't exist
+                        const fieldValue = (row[columnIndex] || '').toLowerCase();
+                        return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
                     });
                 } else if (activeFilter === 'pending') {
                     return rowText.includes('pending');

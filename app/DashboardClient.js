@@ -33,7 +33,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
             }
         };
 
-        const interval = setInterval(fetchData, 5000); // Fetch every 5 seconds
+        const interval = setInterval(fetchData, 30000); // Fetch every 5 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, []);

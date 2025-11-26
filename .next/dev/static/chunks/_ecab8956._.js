@@ -234,12 +234,12 @@ function DataTable({ headers, rows }) {
         let className = __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badge;
         if (statusLower.includes('in person')) {
             className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeBlue;
-        } else if (statusLower.includes('approved') || statusLower.includes('confirmed') || statusLower.includes('paid') || statusLower.includes('completed') || statusLower.includes('collected') || statusLower.includes('yes') || statusLower.includes('participating') || statusLower.includes('issued')) {
-            className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeSuccess;
-        } else if (statusLower.includes('pending')) {
-            className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeWarning;
         } else if (statusLower.includes('not submitted') || statusLower.includes('not paid') || statusLower.includes('no') || statusLower.includes('not participating')) {
             className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeDanger;
+        } else if (statusLower.includes('pending')) {
+            className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeWarning;
+        } else if (statusLower.includes('approved') || statusLower.includes('confirmed') || statusLower.includes('paid') || statusLower.includes('completed') || statusLower.includes('collected') || statusLower.includes('yes') || statusLower.includes('participating') || statusLower.includes('issued')) {
+            className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeSuccess;
         } else {
             className += ' ' + __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badgeDefault;
         }

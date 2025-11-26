@@ -35,12 +35,12 @@ export default function DataTable({ headers, rows }) {
 
         if (statusLower.includes('in person')) {
             className += ' ' + styles.badgeBlue;
-        } else if (statusLower.includes('approved') || statusLower.includes('confirmed') || statusLower.includes('paid') || statusLower.includes('completed') || statusLower.includes('collected') || statusLower.includes('yes') || statusLower.includes('participating') || statusLower.includes('issued')) {
-            className += ' ' + styles.badgeSuccess;
-        } else if (statusLower.includes('pending')) {
-            className += ' ' + styles.badgeWarning;
         } else if (statusLower.includes('not submitted') || statusLower.includes('not paid') || statusLower.includes('no') || statusLower.includes('not participating')) {
             className += ' ' + styles.badgeDanger;
+        } else if (statusLower.includes('pending')) {
+            className += ' ' + styles.badgeWarning;
+        } else if (statusLower.includes('approved') || statusLower.includes('confirmed') || statusLower.includes('paid') || statusLower.includes('completed') || statusLower.includes('collected') || statusLower.includes('yes') || statusLower.includes('participating') || statusLower.includes('issued')) {
+            className += ' ' + styles.badgeSuccess;
         } else {
             className += ' ' + styles.badgeDefault;
         }

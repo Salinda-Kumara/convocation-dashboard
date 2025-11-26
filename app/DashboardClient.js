@@ -55,6 +55,8 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                         const fieldLower = (field || '').toLowerCase();
                         return fieldLower.includes('approved') || fieldLower.includes('confirmed');
                     });
+                } else if (activeFilter === 'pending') {
+                    return rowText.includes('pending');
                 } else if (activeFilter === 'notSubmitted') {
                     return rowText.includes('not submitted') || rowText.includes('not paid');
                 } else if (activeFilter === 'incomplete') {
@@ -139,6 +141,14 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     isActive={activeFilter === 'submitted'}
                 />
                 <StatsCard
+                    label="Approval Pending"
+                    value={stats.pending}
+                    icon="⏳"
+                    color="orange"
+                    onClick={() => handleFilterClick('pending')}
+                    isActive={activeFilter === 'pending'}
+                />
+                <StatsCard
                     label="Incomplete"
                     value={stats.incomplete}
                     icon="⚠"
@@ -168,8 +178,9 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                             Filtered: {
                                 activeFilter === 'allApproved' ? 'All Approved' :
                                     activeFilter === 'submitted' ? 'Submitted' :
-                                        activeFilter === 'incomplete' ? 'Incomplete' :
-                                            'Not Submitted'
+                                        activeFilter === 'pending' ? 'Approval Pending' :
+                                            activeFilter === 'incomplete' ? 'Incomplete' :
+                                                'Not Submitted'
                             } •{' '}
                         </span>
                     )}

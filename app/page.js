@@ -58,8 +58,8 @@ export default async function Home() {
         <main className={styles.main}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>Convocation Status Dashboard</h1>
-                    <p className={styles.subtitle}>Real-time student registration tracking & analytics</p>
+                    <h1 className={styles.title}>Document Submission Dashboard</h1>
+                    <p className={styles.subtitle}>Real-time student Submission tracking & analytics</p>
                 </div>
 
                 {data.length === 0 ? (

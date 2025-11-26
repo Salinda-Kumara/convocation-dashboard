@@ -1,71 +1,59 @@
-import { getSheetData } from '@/lib/googleSheets';
+'use client';
+
+import { useState, useEffect } from 'react';
 import DashboardClient from './DashboardClient';
 import styles from './page.module.css';
 
-export const revalidate = 10; // Revalidate every 3 seconds
+export default function Home() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-export default async function Home() {
-    const data = await getSheetData();
-    const headers = data.length > 0 ? data[0] : [];
-    const rows = data.length > 1 ? data.slice(1) : [];
+    useEffect(() => {
+        fetchData();
+    }, []);
 
-    const stats = {
-        total: rows.length,
-        submitted: 0,
-        allApproved: 0,
-        pending: 0,
-        incomplete: 0,
-        notSubmitted: 0,
-        totalGuests: 0,
+    const fetchData = async () => {
+        try {
+            const response = await fetch('/api/data');
+            if (response.ok) {
+                const result = await response.json();
+                setData(result);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        } finally {
+            setLoading(false);
+        }
     };
 
-    // Find "NO OF GUESTS ALLOWED" column index (handle newlines and case)
-    const guestColumnIndex = headers.findIndex(h =>
-        h.toLowerCase().replace(/\n/g, ' ').includes('no of guests')
-    );
+    if (loading) {
+        return (
+            <main className={styles.main}>
+                <div className={styles.container}>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>Document Submission Dashboard</h1>
+                        <p className={styles.subtitle}>Loading data...</p>
+                    </div>
+                    <div className={styles.loading}>
+                        <div className={styles.spinner}></div>
+                        <p>Fetching latest data from Google Sheets...</p>
+                    </div>
+                </div>
+            </main>
+        );
+    }
 
-    rows.forEach(row => {
-        const rowText = row.join(' ').toLowerCase();
-
-        if (rowText.includes('approved') || rowText.includes('confirmed')) {
-            stats.submitted++;
-        }
-
-        if (rowText.includes('pending')) {
-            stats.pending++;
-        }
-
-        if (rowText.includes('not submitted') || rowText.includes('not paid')) {
-            stats.notSubmitted++;
-        }
-
-        // Calculate total guests
-        if (guestColumnIndex !== -1) {
-            const guests = parseInt(row[guestColumnIndex]) || 0;
-            stats.totalGuests += guests;
-        }
-    });
-
-    // Calculate field-by-field completion stats
-    const fieldStats = {};
-    const statusColumns = headers.slice(3); // Skip S.No, Registration Number, Name
-
-    statusColumns.forEach((header, index) => {
-        const colIndex = index + 3;
-        const values = rows.map(row => row[colIndex] || '');
-
-        const approved = values.filter(v => v.toLowerCase().includes('approved') || v.toLowerCase().includes('confirmed')).length;
-        const pending = values.filter(v => v.toLowerCase().includes('pending')).length;
-        const notSubmitted = values.filter(v => v.toLowerCase().includes('not submitted') || v.toLowerCase().includes('not paid')).length;
-
-        fieldStats[header] = {
-            approved,
-            pending,
-            notSubmitted,
-            total: rows.length,
-            completionRate: Math.round((approved / rows.length) * 100)
-        };
-    });
+    if (!data || data.rows.length === 0) {
+        return (
+            <main className={styles.main}>
+                <div className={styles.container}>
+                    <div className={styles.error}>
+                        <p>No data found. Please check your Google Sheet configuration.</p>
+                    </div>
+                </div>
+            </main>
+        );
+    }
 
     return (
         <main className={styles.main}>
@@ -75,19 +63,13 @@ export default async function Home() {
                     <p className={styles.subtitle}>Real-time student Submission tracking & analytics</p>
                 </div>
 
-                {data.length === 0 ? (
-                    <div className={styles.error}>
-                        <p>No data found. Please check your Google Sheet configuration.</p>
-                    </div>
-                ) : (
-                    <DashboardClient
-                        headers={headers}
-                        rows={rows}
-                        stats={stats}
-                        fieldStats={fieldStats}
-                        totalStudents={rows.length}
-                    />
-                )}
+                <DashboardClient
+                    headers={data.headers}
+                    rows={data.rows}
+                    stats={data.stats}
+                    fieldStats={data.fieldStats}
+                    totalStudents={data.totalStudents}
+                />
             </div>
         </main>
     );

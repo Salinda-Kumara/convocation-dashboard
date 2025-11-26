@@ -188,8 +188,21 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/googleapis/build/src/index.js [app-route] (ecmascript)");
 ;
+// Simple in-memory cache
+let cache = {
+    data: null,
+    timestamp: null,
+    ttl: 10000 // Cache for 10 seconds
+};
 async function getSheetData() {
     try {
+        // Check if cache is still valid
+        const now = Date.now();
+        if (cache.data && cache.timestamp && now - cache.timestamp < cache.ttl) {
+            console.log('Returning cached data');
+            return cache.data;
+        }
+        console.log('Fetching fresh data from Google Sheets');
         const auth = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].auth.GoogleAuth({
             credentials: {
                 client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -213,11 +226,19 @@ async function getSheetData() {
         if (!rows || rows.length === 0) {
             return [];
         }
+        // Update cache
+        cache.data = rows;
+        cache.timestamp = now;
         return rows;
     } catch (error) {
         console.error('Error fetching sheet data:', error);
         if (error.response) {
             console.error('Error response data:', JSON.stringify(error.response.data, null, 2));
+        }
+        // Return cached data if available, even if expired
+        if (cache.data) {
+            console.log('Returning stale cached data due to error');
+            return cache.data;
         }
         return [];
     }

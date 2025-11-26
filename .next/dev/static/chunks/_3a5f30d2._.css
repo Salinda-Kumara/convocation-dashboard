@@ -563,6 +563,28 @@
   padding: 3rem;
 }
 
+.page-module__E0kJGG__loading {
+  text-align: center;
+  color: var(--secondary);
+  padding: 4rem 2rem;
+}
+
+.page-module__E0kJGG__spinner {
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1.5rem;
+  animation: 1s linear infinite page-module__E0kJGG__spin;
+}
+
+@keyframes page-module__E0kJGG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 768px) {
   .page-module__E0kJGG__main {
     padding: .75rem;

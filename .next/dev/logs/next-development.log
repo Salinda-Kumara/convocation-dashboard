@@ -1,8 +1,134 @@
-[00:00:00.986] Server  LOG      ✓ Ready in 616ms
-[00:00:02.768] Browser ERROR   Error fetching data: {}
-[00:00:02.768] Browser ERROR   Error fetching data: {}
-[00:00:05.811] Server  LOG      ○ Compiling / ...
-[00:00:15.213] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:38.426] Server  LOG      ✓ Compiled in 12ms
-[00:00:51.519] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:55.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.010] Server  LOG      ✓ Ready in 629ms
+[00:00:10.835] Server  LOG      ○ Compiling / ...
+[00:00:14.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:20.821] Server  LOG      ○ Compiling /api/data ...
+[00:00:30.816] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:36.763] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:43.885] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:37.112] Server  LOG      ✓ Compiled in 24ms
+[00:04:35.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:38.300] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:40.948] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:42.065] Server  LOG     Returning cached data
+[00:06:44.958] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:45.057] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:46.015] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:49.184] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:52.162] Server  LOG     Returning cached data
+[00:06:52.318] Server  LOG     Fetching fresh data from Google Sheets
+[00:06:54.716] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:57.892] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:00.908] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:03.895] Server  LOG     Returning cached data
+[00:07:06.907] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:09.894] Server  LOG     Returning cached data
+[00:07:12.904] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:15.894] Server  LOG     Returning cached data
+[00:07:18.895] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:21.905] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:24.895] Server  LOG     Returning cached data
+[00:07:27.891] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:30.901] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:33.901] Server  LOG     Returning cached data
+[00:07:36.888] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:39.888] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:42.902] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:45.889] Server  LOG     Returning cached data
+[00:07:48.952] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:50.209] Server  LOG     Returning cached data
+[00:07:50.225] Server  LOG     Returning cached data
+[00:07:53.358] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:55.817] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:55.843] Server  LOG     Returning cached data
+[00:07:56.999] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:57.021] Server  LOG     Fetching fresh data from Google Sheets
+[00:07:58.463] Server  LOG      ✓ Compiled in 25ms
+[00:08:00.999] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:04.006] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:07.001] Server  LOG     Returning cached data
+[00:08:10.025] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:10.678] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:10.700] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:14.763] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:17.754] Server  LOG     Returning cached data
+[00:08:20.770] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:23.766] Server  LOG     Returning cached data
+[00:08:26.753] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:29.761] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:32.764] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:35.764] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:38.756] Server  LOG     Returning cached data
+[00:08:41.761] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:44.755] Server  LOG     Returning cached data
+[00:08:47.754] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:50.754] Server  LOG     Returning cached data
+[00:08:53.756] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:56.812] Server  LOG     Fetching fresh data from Google Sheets
+[00:08:59.765] Server  LOG     Returning cached data
+[00:09:02.770] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:05.760] Server  LOG     Returning cached data
+[00:09:08.759] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:11.759] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:14.760] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:17.757] Server  LOG     Returning cached data
+[00:09:20.757] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:23.760] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:26.760] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:29.758] Server  LOG     Returning cached data
+[00:09:32.760] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:35.756] Server  LOG     Returning cached data
+[00:09:38.756] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:41.755] Server  LOG     Returning cached data
+[00:09:44.757] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:47.754] Server  LOG     Returning cached data
+[00:09:50.755] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:53.755] Server  LOG     Fetching fresh data from Google Sheets
+[00:09:56.752] Server  LOG     Returning cached data
+[00:09:59.754] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:02.752] Server  LOG     Returning cached data
+[00:10:05.769] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:12.791] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:13.793] Server  LOG     Returning cached data
+[00:10:13.815] Server  LOG      ✓ Compiled in 0ms
+[00:10:14.778] Server  LOG     Returning cached data
+[00:10:17.757] Server  LOG     Returning cached data
+[00:10:20.756] Server  LOG     Returning cached data
+[00:10:23.756] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:26.766] Server  LOG     Returning cached data
+[00:10:29.790] Server  LOG     Returning cached data
+[00:10:32.773] Server  LOG     Returning cached data
+[00:10:35.772] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:38.756] Server  LOG     Returning cached data
+[00:10:41.760] Server  LOG     Returning cached data
+[00:10:44.762] Server  LOG     Returning cached data
+[00:10:47.183] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:47.221] Server  LOG     Fetching fresh data from Google Sheets
+[00:10:54.160] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:54.190] Server  LOG     Returning cached data
+[00:11:01.822] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:01.853] Server  LOG     Fetching fresh data from Google Sheets
+[00:11:15.089] Server  LOG     Fetching fresh data from Google Sheets
+[00:11:25.090] Server  LOG     Fetching fresh data from Google Sheets
+[00:11:35.118] Server  LOG     Fetching fresh data from Google Sheets
+[00:11:45.087] Server  LOG     Returning cached data
+[00:11:55.089] Server  LOG     Fetching fresh data from Google Sheets
+[00:12:05.088] Server  LOG     Returning cached data
+[00:12:15.090] Server  LOG     Fetching fresh data from Google Sheets
+[00:12:25.089] Server  LOG     Returning cached data
+[00:12:35.089] Server  LOG     Fetching fresh data from Google Sheets
+[00:12:45.087] Server  LOG     Returning cached data
+[00:12:52.085] Server  LOG      ✓ Compiled in 31ms
+[00:12:55.081] Server  LOG     Fetching fresh data from Google Sheets
+[00:13:05.103] Server  LOG     Fetching fresh data from Google Sheets
+[00:13:05.531] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:05.583] Server  LOG     Fetching fresh data from Google Sheets
+[00:13:10.860] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:10.895] Server  LOG     Returning cached data
+[00:13:41.102] Server  LOG     Fetching fresh data from Google Sheets
+[00:14:11.101] Server  LOG     Fetching fresh data from Google Sheets
+[00:14:41.100] Server  LOG     Fetching fresh data from Google Sheets
+[00:15:11.099] Server  LOG     Fetching fresh data from Google Sheets
+[00:15:41.102] Server  LOG     Fetching fresh data from Google Sheets
+[00:15:53.827] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:53.865] Server  LOG     Fetching fresh data from Google Sheets

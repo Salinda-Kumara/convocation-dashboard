@@ -249,28 +249,37 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$page$2e$module$2e$css
 ;
 ;
 ;
-const revalidate = 3; // Revalidate every 3 seconds
+const revalidate = 10; // Revalidate every 3 seconds
 async function Home() {
     const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$googleSheets$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSheetData"])();
     const headers = data.length > 0 ? data[0] : [];
     const rows = data.length > 1 ? data.slice(1) : [];
-    // Calculate statistics
     const stats = {
         total: rows.length,
-        approved: 0,
+        submitted: 0,
+        allApproved: 0,
         pending: 0,
-        notSubmitted: 0
+        incomplete: 0,
+        notSubmitted: 0,
+        totalGuests: 0
     };
+    // Find "NO OF GUESTS ALLOWED" column index (handle newlines and case)
+    const guestColumnIndex = headers.findIndex((h)=>h.toLowerCase().replace(/\n/g, ' ').includes('no of guests'));
     rows.forEach((row)=>{
         const rowText = row.join(' ').toLowerCase();
         if (rowText.includes('approved') || rowText.includes('confirmed')) {
-            stats.approved++;
+            stats.submitted++;
         }
         if (rowText.includes('pending')) {
             stats.pending++;
         }
         if (rowText.includes('not submitted') || rowText.includes('not paid')) {
             stats.notSubmitted++;
+        }
+        // Calculate total guests
+        if (guestColumnIndex !== -1) {
+            const guests = parseInt(row[guestColumnIndex]) || 0;
+            stats.totalGuests += guests;
         }
     });
     // Calculate field-by-field completion stats
@@ -303,7 +312,7 @@ async function Home() {
                             children: "Document Submission Dashboard"
                         }, void 0, false, {
                             fileName: "[project]/app/page.js",
-                            lineNumber: 61,
+                            lineNumber: 74,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -311,13 +320,13 @@ async function Home() {
                             children: "Real-time student Submission tracking & analytics"
                         }, void 0, false, {
                             fileName: "[project]/app/page.js",
-                            lineNumber: 62,
+                            lineNumber: 75,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.js",
-                    lineNumber: 60,
+                    lineNumber: 73,
                     columnNumber: 17
                 }, this),
                 data.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -326,12 +335,12 @@ async function Home() {
                         children: "No data found. Please check your Google Sheet configuration."
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 67,
+                        lineNumber: 80,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.js",
-                    lineNumber: 66,
+                    lineNumber: 79,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                     headers: headers,
@@ -341,18 +350,18 @@ async function Home() {
                     totalStudents: rows.length
                 }, void 0, false, {
                     fileName: "[project]/app/page.js",
-                    lineNumber: 70,
+                    lineNumber: 83,
                     columnNumber: 21
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.js",
-            lineNumber: 59,
+            lineNumber: 72,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/page.js",
-        lineNumber: 58,
+        lineNumber: 71,
         columnNumber: 9
     }, this);
 }

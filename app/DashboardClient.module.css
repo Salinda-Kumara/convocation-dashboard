@@ -24,13 +24,33 @@
     background: rgba(255, 255, 255, 0.03);
     border-radius: 0.5rem;
     border: 1px solid var(--border);
+    flex: 0 0 200px;
+    /* Fixed width, don't grow or shrink */
+    min-width: 200px;
 }
 
 .statsGrid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    overflow-x: auto;
     gap: 1rem;
     margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    /* Space for scrollbar */
+    scrollbar-width: thin;
+    /* Firefox */
+}
+
+.statsGrid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.statsGrid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.statsGrid::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 3px;
 }
 
 .chartsGrid {
@@ -133,17 +153,7 @@
     transform: translateY(0);
 }
 
-@media (max-width: 1024px) {
-    .statsGrid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .statsGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .chartsGrid {
         grid-template-columns: 1fr;
     }
@@ -160,11 +170,5 @@
 
     .exportBtn {
         width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .statsGrid {
-        grid-template-columns: 1fr;
     }
 }

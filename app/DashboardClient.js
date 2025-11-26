@@ -33,7 +33,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
             }
         };
 
-        const interval = setInterval(fetchData, 30000); // Fetch every 5 seconds
+        const interval = setInterval(fetchData, 10000); // Fetch every 30 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, []);
@@ -174,6 +174,14 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="red"
                     onClick={() => handleFilterClick('notSubmitted')}
                     isActive={activeFilter === 'notSubmitted'}
+                />
+                <StatsCard
+                    label="Total Guests"
+                    value={stats.totalGuests || 0}
+                    icon="👨‍👩‍👧‍👦"
+                    color="cyan"
+                    onClick={() => { }} // No filter for guests
+                    isActive={true} // Always active or maybe false? Let's keep it consistent visually.
                 />
             </div>
 

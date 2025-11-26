@@ -18,7 +18,13 @@ export async function GET() {
             pending: 0,
             notSubmitted: 0,
             incomplete: 0,
+            totalGuests: 0,
         };
+
+        // Find "NO OF GUESTS ALLOWED" column index (handle newlines and case)
+        const guestColumnIndex = headers.findIndex(h =>
+            h.toLowerCase().replace(/\n/g, ' ').includes('no of guests')
+        );
 
         // Define required columns for "All Approved" check
         const requiredColumns = [
@@ -69,6 +75,13 @@ export async function GET() {
 
             if (hasNotSubmitted && hasOtherStatus) {
                 stats.incomplete++;
+            }
+
+            // Calculate total guests
+            if (guestColumnIndex !== -1) {
+                const rawValue = row[guestColumnIndex];
+                const guests = parseInt(rawValue) || 0;
+                stats.totalGuests += guests;
             }
         });
 

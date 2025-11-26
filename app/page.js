@@ -2,26 +2,33 @@ import { getSheetData } from '@/lib/googleSheets';
 import DashboardClient from './DashboardClient';
 import styles from './page.module.css';
 
-export const revalidate = 3; // Revalidate every 3 seconds
+export const revalidate = 10; // Revalidate every 3 seconds
 
 export default async function Home() {
     const data = await getSheetData();
     const headers = data.length > 0 ? data[0] : [];
     const rows = data.length > 1 ? data.slice(1) : [];
 
-    // Calculate statistics
     const stats = {
         total: rows.length,
-        approved: 0,
+        submitted: 0,
+        allApproved: 0,
         pending: 0,
+        incomplete: 0,
         notSubmitted: 0,
+        totalGuests: 0,
     };
+
+    // Find "NO OF GUESTS ALLOWED" column index (handle newlines and case)
+    const guestColumnIndex = headers.findIndex(h =>
+        h.toLowerCase().replace(/\n/g, ' ').includes('no of guests')
+    );
 
     rows.forEach(row => {
         const rowText = row.join(' ').toLowerCase();
 
         if (rowText.includes('approved') || rowText.includes('confirmed')) {
-            stats.approved++;
+            stats.submitted++;
         }
 
         if (rowText.includes('pending')) {
@@ -30,6 +37,12 @@ export default async function Home() {
 
         if (rowText.includes('not submitted') || rowText.includes('not paid')) {
             stats.notSubmitted++;
+        }
+
+        // Calculate total guests
+        if (guestColumnIndex !== -1) {
+            const guests = parseInt(row[guestColumnIndex]) || 0;
+            stats.totalGuests += guests;
         }
     });
 

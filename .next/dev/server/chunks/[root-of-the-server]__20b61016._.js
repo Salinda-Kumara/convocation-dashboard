@@ -295,15 +295,25 @@ async function GET() {
         rows.forEach((row)=>{
             const rowText = row.join(' ').toLowerCase();
             const statusFields = row.slice(4); // Skip first 4 columns (S.No, Reg, Name, Name Appeared)
-            // Check if at least one field is approved/confirmed
-            if (rowText.includes('approved') || rowText.includes('confirmed')) {
+            // Check if at least one field is approved/confirmed in the required columns
+            const hasApprovedInTarget = requiredColumns.some((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                // Exclude negative statuses first
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
+            if (hasApprovedInTarget) {
                 stats.submitted++;
             }
             // Check if ALL REQUIRED fields are approved/confirmed
             const requiredFieldsApproved = requiredColumns.every((columnName)=>{
                 const columnIndex = headers.indexOf(columnName);
                 if (columnIndex === -1) return false; // Column doesn't exist
-                const fieldValue = (row[columnIndex] || '').toLowerCase();
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                // Exclude negative statuses first
+                if (fieldValue.includes('not ')) return false;
                 return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
             });
             if (requiredFieldsApproved) {
@@ -312,7 +322,14 @@ async function GET() {
             if (rowText.includes('pending')) {
                 stats.pending++;
             }
-            if (rowText.includes('not submitted') || rowText.includes('not paid')) {
+            // Check if ALL required columns are "Not Submitted" or "Pending"
+            const allNotSubmittedOrPending = requiredColumns.every((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                return fieldValue.includes('not submitted') || fieldValue.includes('not paid') || fieldValue.includes('pending') || fieldValue === '';
+            });
+            if (allNotSubmittedOrPending) {
                 stats.notSubmitted++;
             }
             // Check if incomplete: has at least one "not submitted" and at least one other status

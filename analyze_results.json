@@ -1,0 +1,13 @@
+{
+  "totalStudents": 107,
+  "submitted": 107,
+  "hasPending": 7,
+  "notSubmitted": 14,
+  "uniqueValues": {
+    "Supplication Form": {},
+    "SAB Alumni Registration Form": {},
+    "Exit Interview Form": {},
+    "Finance Clearance Form": {},
+    "Convocation Payment": {}
+  }
+}

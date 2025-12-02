@@ -1,0 +1,53 @@
+{
+  "headers": [
+    "S. No",
+    "Registration Number",
+    "Name with initials",
+    "Name Appeared in the Degree Certificate",
+    "Supplication Form",
+    "SAB Alumni Registration Form",
+    "Exit Interview Form",
+    "Finance Clearance Form",
+    "Convocation Payment",
+    "Participation",
+    "No of Guests\n Allowed"
+  ],
+  "columns": {
+    "Supplication Form": {
+      "index": 4,
+      "uniqueValues": [
+        "Approved",
+        "Not Submitted"
+      ]
+    },
+    "SAB Alumni Registration Form": {
+      "index": 5,
+      "uniqueValues": [
+        "Approved",
+        "Not Submitted"
+      ]
+    },
+    "Exit Interview Form": {
+      "index": 6,
+      "uniqueValues": [
+        "Approved",
+        "Not Submitted"
+      ]
+    },
+    "Finance Clearance Form": {
+      "index": 7,
+      "uniqueValues": [
+        "Approved",
+        "Not Submitted",
+        "Pending"
+      ]
+    },
+    "Convocation Payment": {
+      "index": 8,
+      "uniqueValues": [
+        "Confirmed",
+        "Not Paid"
+      ]
+    }
+  }
+}

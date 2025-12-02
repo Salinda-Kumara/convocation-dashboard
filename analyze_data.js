@@ -70,10 +70,26 @@ async function analyzeData() {
         });
 
         // Overall statistics
+        // Overall statistics
         console.log('\n=== OVERALL STATISTICS ===');
+
+        const requiredColumns = [
+            'Supplication Form',
+            'SAB Alumni Registration Form',
+            'Exit Interview Form',
+            'Finance Clearance Form',
+            'Convocation Payment'
+        ];
+
         const totalApproved = dataRows.filter(row => {
-            const rowText = row.join(' ').toLowerCase();
-            return rowText.includes('approved') || rowText.includes('confirmed');
+            return requiredColumns.some(columnName => {
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                // Exclude negative statuses first
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
         }).length;
 
         const totalPending = dataRows.filter(row => {
@@ -81,13 +97,18 @@ async function analyzeData() {
         }).length;
 
         const totalNotSubmitted = dataRows.filter(row => {
-            return row.join(' ').toLowerCase().includes('not submitted') || row.join(' ').toLowerCase().includes('not paid');
+            return requiredColumns.every(columnName => {
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                return fieldValue.includes('not submitted') || fieldValue.includes('not paid') || fieldValue.includes('pending') || fieldValue === '';
+            });
         }).length;
 
         console.log(`Total Students: ${dataRows.length}`);
-        console.log(`Fully Approved: ${totalApproved}`);
-        console.log(`Has Pending: ${totalPending}`);
-        console.log(`Has Not Submitted: ${totalNotSubmitted}`);
+        console.log(`Submitted (At least one approved): ${totalApproved}`);
+        console.log(`Has Pending (Anywhere): ${totalPending}`);
+        console.log(`Not Submitted (All required are Not Submitted/Pending): ${totalNotSubmitted}`);
 
     } catch (error) {
         console.error('Error:', error.message);

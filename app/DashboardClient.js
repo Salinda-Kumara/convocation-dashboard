@@ -9,6 +9,16 @@ import styles from './DashboardClient.module.css';
 export default function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: initialStats, fieldStats: initialFieldStats, totalStudents: initialTotalStudents }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [activeFilter, setActiveFilter] = useState(null);
+    const [activeList, setActiveList] = useState(null);
+
+    // Define list ranges for S.No filtering
+    const listRanges = {
+        list1: { min: 1, max: 61, label: 'List 1 (1-61)' },
+        list2: { min: 62, max: 107, label: 'List 2 (62-107)' },
+        list3: { min: 108, max: 211, label: 'List 3 (108-211)' },
+        list4: { min: 212, max: 258, label: 'List 4 (212-258)' },
+        list5: { min: 259, max: 308, label: 'List 5 (259-308)' },
+    };
     const [headers, setHeaders] = useState(initialHeaders);
     const [rows, setRows] = useState(initialRows);
     const [stats, setStats] = useState(initialStats);
@@ -46,6 +56,90 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
         'Finance Clearance Form',
         'Convocation Payment'
     ];
+
+    // Get rows filtered by list only (for stats calculation)
+    const listFilteredRows = useMemo(() => {
+        if (!activeList || !listRanges[activeList]) return rows;
+        const { min, max } = listRanges[activeList];
+        return rows.filter(row => {
+            const sNo = parseInt(row[0], 10);
+            return !isNaN(sNo) && sNo >= min && sNo <= max;
+        });
+    }, [rows, activeList]);
+
+    // Calculate stats based on list-filtered rows
+    const filteredStats = useMemo(() => {
+        const baseRows = listFilteredRows;
+
+        // Count submitted (at least one required field approved)
+        const submitted = baseRows.filter(row => {
+            return requiredColumns.some(columnName => {
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
+        }).length;
+
+        // Count all approved (ALL required fields approved)
+        const allApproved = baseRows.filter(row => {
+            return requiredColumns.every(columnName => {
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
+        }).length;
+
+        // Count pending
+        const pending = baseRows.filter(row => {
+            return row.join(' ').toLowerCase().includes('pending');
+        }).length;
+
+        // Count not submitted
+        const notSubmitted = baseRows.filter(row => {
+            return requiredColumns.every(columnName => {
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                return fieldValue.includes('not submitted') || fieldValue.includes('not paid') || fieldValue.includes('pending') || fieldValue === '';
+            });
+        }).length;
+
+        // Count incomplete
+        const incomplete = baseRows.filter(row => {
+            const statusFields = row.slice(4);
+            const hasNotSubmitted = statusFields.some(field => {
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('not submitted') || fieldLower.includes('not paid');
+            });
+            const hasOtherStatus = statusFields.some(field => {
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('approved') || fieldLower.includes('confirmed') || fieldLower.includes('pending');
+            });
+            return hasNotSubmitted && hasOtherStatus;
+        }).length;
+
+        // Count total guests (sum of "No of Guests" column - handle newlines)
+        const guestColumnIndex = headers.findIndex(h =>
+            h.toLowerCase().replace(/\n/g, ' ').includes('no of guests')
+        );
+        const totalGuests = guestColumnIndex !== -1
+            ? baseRows.reduce((sum, row) => sum + (parseInt(row[guestColumnIndex], 10) || 0), 0)
+            : 0;
+
+        return {
+            total: baseRows.length,
+            submitted,
+            allApproved,
+            pending,
+            notSubmitted,
+            incomplete,
+            totalGuests
+        };
+    }, [listFilteredRows, headers]);
 
     const filteredRows = useMemo(() => {
         let result = rows;
@@ -111,8 +205,17 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
             });
         }
 
+        // Apply list filter (S.No range)
+        if (activeList && listRanges[activeList]) {
+            const { min, max } = listRanges[activeList];
+            result = result.filter(row => {
+                const sNo = parseInt(row[0], 10); // S.No is first column
+                return !isNaN(sNo) && sNo >= min && sNo <= max;
+            });
+        }
+
         return result;
-    }, [rows, searchTerm, activeFilter]);
+    }, [rows, searchTerm, activeFilter, activeList, headers]);
 
     const handleFilterClick = (filterType) => {
         setActiveFilter(activeFilter === filterType ? null : filterType);
@@ -143,7 +246,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
             <div className={styles.statsGrid}>
                 <StatsCard
                     label="Total Students"
-                    value={stats.total}
+                    value={filteredStats.total}
                     icon="👥"
                     color="blue"
                     onClick={() => setActiveFilter(null)}
@@ -151,7 +254,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="All Approved"
-                    value={stats.allApproved}
+                    value={filteredStats.allApproved}
                     icon="✓✓"
                     color="purple"
                     onClick={() => handleFilterClick('allApproved')}
@@ -159,7 +262,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="Submitted"
-                    value={stats.submitted}
+                    value={filteredStats.submitted}
                     icon="✓"
                     color="green"
                     onClick={() => handleFilterClick('submitted')}
@@ -167,7 +270,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="Approval Pending"
-                    value={stats.pending}
+                    value={filteredStats.pending}
                     icon="⏳"
                     color="orange"
                     onClick={() => handleFilterClick('pending')}
@@ -175,7 +278,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="Incomplete"
-                    value={stats.incomplete}
+                    value={filteredStats.incomplete}
                     icon="⚠"
                     color="yellow"
                     onClick={() => handleFilterClick('incomplete')}
@@ -183,7 +286,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="Not Submitted"
-                    value={stats.notSubmitted}
+                    value={filteredStats.notSubmitted}
                     icon="✗"
                     color="red"
                     onClick={() => handleFilterClick('notSubmitted')}
@@ -191,7 +294,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                 />
                 <StatsCard
                     label="Total Guests"
-                    value={stats.totalGuests || 0}
+                    value={filteredStats.totalGuests || 0}
                     icon="👨‍👩‍👧‍👦"
                     color="cyan"
                     onClick={() => { }} // No filter for guests
@@ -205,6 +308,19 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     onSearch={setSearchTerm}
                     placeholder="Search by name or registration number..."
                 />
+                <div className={styles.listFilterWrapper}>
+                    <span className={styles.listFilterLabel}>Select List</span>
+                    <select
+                        className={styles.listFilter}
+                        value={activeList || ''}
+                        onChange={(e) => setActiveList(e.target.value || null)}
+                    >
+                        <option value="">All Students</option>
+                        {Object.entries(listRanges).map(([key, { label }]) => (
+                            <option key={key} value={key}>{label}</option>
+                        ))}
+                    </select>
+                </div>
                 <div className={styles.actions}>
                     {activeFilter && (
                         <span className={styles.filterBadge}>

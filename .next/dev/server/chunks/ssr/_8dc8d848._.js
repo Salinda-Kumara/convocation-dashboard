@@ -317,6 +317,9 @@ __turbopack_context__.v({
   "chartsGrid": "DashboardClient-module__MP3H1a__chartsGrid",
   "exportBtn": "DashboardClient-module__MP3H1a__exportBtn",
   "filterBadge": "DashboardClient-module__MP3H1a__filterBadge",
+  "listFilter": "DashboardClient-module__MP3H1a__listFilter",
+  "listFilterLabel": "DashboardClient-module__MP3H1a__listFilterLabel",
+  "listFilterWrapper": "DashboardClient-module__MP3H1a__listFilterWrapper",
   "quickStatsContainer": "DashboardClient-module__MP3H1a__quickStatsContainer",
   "quickStatsGrid": "DashboardClient-module__MP3H1a__quickStatsGrid",
   "resultCount": "DashboardClient-module__MP3H1a__resultCount",
@@ -352,6 +355,35 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$mo
 function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: initialStats, fieldStats: initialFieldStats, totalStudents: initialTotalStudents }) {
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [activeFilter, setActiveFilter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [activeList, setActiveList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    // Define list ranges for S.No filtering
+    const listRanges = {
+        list1: {
+            min: 1,
+            max: 61,
+            label: 'List 1 (1-61)'
+        },
+        list2: {
+            min: 62,
+            max: 107,
+            label: 'List 2 (62-107)'
+        },
+        list3: {
+            min: 108,
+            max: 211,
+            label: 'List 3 (108-211)'
+        },
+        list4: {
+            min: 212,
+            max: 258,
+            label: 'List 4 (212-258)'
+        },
+        list5: {
+            min: 259,
+            max: 308,
+            label: 'List 5 (259-308)'
+        }
+    };
     const [headers, setHeaders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialHeaders);
     const [rows, setRows] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialRows);
     const [stats, setStats] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialStats);
@@ -385,6 +417,83 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
         'Finance Clearance Form',
         'Convocation Payment'
     ];
+    // Get rows filtered by list only (for stats calculation)
+    const listFilteredRows = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        if (!activeList || !listRanges[activeList]) return rows;
+        const { min, max } = listRanges[activeList];
+        return rows.filter((row)=>{
+            const sNo = parseInt(row[0], 10);
+            return !isNaN(sNo) && sNo >= min && sNo <= max;
+        });
+    }, [
+        rows,
+        activeList
+    ]);
+    // Calculate stats based on list-filtered rows
+    const filteredStats = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const baseRows = listFilteredRows;
+        // Count submitted (at least one required field approved)
+        const submitted = baseRows.filter((row)=>{
+            return requiredColumns.some((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
+        }).length;
+        // Count all approved (ALL required fields approved)
+        const allApproved = baseRows.filter((row)=>{
+            return requiredColumns.every((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                if (fieldValue.includes('not ')) return false;
+                return fieldValue.includes('approved') || fieldValue.includes('confirmed') || fieldValue.includes('paid') || fieldValue.includes('completed');
+            });
+        }).length;
+        // Count pending
+        const pending = baseRows.filter((row)=>{
+            return row.join(' ').toLowerCase().includes('pending');
+        }).length;
+        // Count not submitted
+        const notSubmitted = baseRows.filter((row)=>{
+            return requiredColumns.every((columnName)=>{
+                const columnIndex = headers.indexOf(columnName);
+                if (columnIndex === -1) return false;
+                const fieldValue = (row[columnIndex] || '').toLowerCase().trim();
+                return fieldValue.includes('not submitted') || fieldValue.includes('not paid') || fieldValue.includes('pending') || fieldValue === '';
+            });
+        }).length;
+        // Count incomplete
+        const incomplete = baseRows.filter((row)=>{
+            const statusFields = row.slice(4);
+            const hasNotSubmitted = statusFields.some((field)=>{
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('not submitted') || fieldLower.includes('not paid');
+            });
+            const hasOtherStatus = statusFields.some((field)=>{
+                const fieldLower = (field || '').toLowerCase();
+                return fieldLower.includes('approved') || fieldLower.includes('confirmed') || fieldLower.includes('pending');
+            });
+            return hasNotSubmitted && hasOtherStatus;
+        }).length;
+        // Count total guests (sum of "No of Guests" column - handle newlines)
+        const guestColumnIndex = headers.findIndex((h)=>h.toLowerCase().replace(/\n/g, ' ').includes('no of guests'));
+        const totalGuests = guestColumnIndex !== -1 ? baseRows.reduce((sum, row)=>sum + (parseInt(row[guestColumnIndex], 10) || 0), 0) : 0;
+        return {
+            total: baseRows.length,
+            submitted,
+            allApproved,
+            pending,
+            notSubmitted,
+            incomplete,
+            totalGuests
+        };
+    }, [
+        listFilteredRows,
+        headers
+    ]);
     const filteredRows = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         let result = rows;
         // Apply status filter
@@ -442,11 +551,21 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                 return row.some((cell)=>cell && cell.toString().toLowerCase().includes(searchLower));
             });
         }
+        // Apply list filter (S.No range)
+        if (activeList && listRanges[activeList]) {
+            const { min, max } = listRanges[activeList];
+            result = result.filter((row)=>{
+                const sNo = parseInt(row[0], 10); // S.No is first column
+                return !isNaN(sNo) && sNo >= min && sNo <= max;
+            });
+        }
         return result;
     }, [
         rows,
         searchTerm,
-        activeFilter
+        activeFilter,
+        activeList,
+        headers
     ]);
     const handleFilterClick = (filterType)=>{
         setActiveFilter(activeFilter === filterType ? null : filterType);
@@ -479,92 +598,92 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Total Students",
-                        value: stats.total,
+                        value: filteredStats.total,
                         icon: "👥",
                         color: "blue",
                         onClick: ()=>setActiveFilter(null),
                         isActive: activeFilter === null
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 144,
+                        lineNumber: 247,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "All Approved",
-                        value: stats.allApproved,
+                        value: filteredStats.allApproved,
                         icon: "✓✓",
                         color: "purple",
                         onClick: ()=>handleFilterClick('allApproved'),
                         isActive: activeFilter === 'allApproved'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 152,
+                        lineNumber: 255,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Submitted",
-                        value: stats.submitted,
+                        value: filteredStats.submitted,
                         icon: "✓",
                         color: "green",
                         onClick: ()=>handleFilterClick('submitted'),
                         isActive: activeFilter === 'submitted'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 160,
+                        lineNumber: 263,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Approval Pending",
-                        value: stats.pending,
+                        value: filteredStats.pending,
                         icon: "⏳",
                         color: "orange",
                         onClick: ()=>handleFilterClick('pending'),
                         isActive: activeFilter === 'pending'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 168,
+                        lineNumber: 271,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Incomplete",
-                        value: stats.incomplete,
+                        value: filteredStats.incomplete,
                         icon: "⚠",
                         color: "yellow",
                         onClick: ()=>handleFilterClick('incomplete'),
                         isActive: activeFilter === 'incomplete'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 176,
+                        lineNumber: 279,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Not Submitted",
-                        value: stats.notSubmitted,
+                        value: filteredStats.notSubmitted,
                         icon: "✗",
                         color: "red",
                         onClick: ()=>handleFilterClick('notSubmitted'),
                         isActive: activeFilter === 'notSubmitted'
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 184,
+                        lineNumber: 287,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatsCard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         label: "Total Guests",
-                        value: stats.totalGuests || 0,
+                        value: filteredStats.totalGuests || 0,
                         icon: "👨‍👩‍👧‍👦",
                         color: "cyan",
                         onClick: ()=>{},
                         isActive: true
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 192,
+                        lineNumber: 295,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 143,
+                lineNumber: 246,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -575,7 +694,51 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                         placeholder: "Search by name or registration number..."
                     }, void 0, false, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 204,
+                        lineNumber: 307,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].listFilterWrapper,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].listFilterLabel,
+                                children: "Select List"
+                            }, void 0, false, {
+                                fileName: "[project]/app/DashboardClient.js",
+                                lineNumber: 312,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$DashboardClient$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].listFilter,
+                                value: activeList || '',
+                                onChange: (e)=>setActiveList(e.target.value || null),
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                        value: "",
+                                        children: "All Students"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/DashboardClient.js",
+                                        lineNumber: 318,
+                                        columnNumber: 25
+                                    }, this),
+                                    Object.entries(listRanges).map(([key, { label }])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                            value: key,
+                                            children: label
+                                        }, key, false, {
+                                            fileName: "[project]/app/DashboardClient.js",
+                                            lineNumber: 320,
+                                            columnNumber: 29
+                                        }, this))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/DashboardClient.js",
+                                lineNumber: 313,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/DashboardClient.js",
+                        lineNumber: 311,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -591,7 +754,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 210,
+                                lineNumber: 326,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -605,7 +768,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 220,
+                                lineNumber: 336,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -614,19 +777,19 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                                 children: "📥 Export CSV"
                             }, void 0, false, {
                                 fileName: "[project]/app/DashboardClient.js",
-                                lineNumber: 223,
+                                lineNumber: 339,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/DashboardClient.js",
-                        lineNumber: 208,
+                        lineNumber: 324,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 203,
+                lineNumber: 306,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DataTable$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -634,7 +797,7 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
                 rows: filteredRows
             }, void 0, false, {
                 fileName: "[project]/app/DashboardClient.js",
-                lineNumber: 230,
+                lineNumber: 346,
                 columnNumber: 13
             }, this)
         ]

@@ -17,7 +17,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
         list2: { min: 62, max: 107, label: 'List 2 (62-107)' },
         list3: { min: 108, max: 211, label: 'List 3 (108-211)' },
         list4: { min: 212, max: 258, label: 'List 4 (212-258)' },
-        list5: { min: 259, max: 308, label: 'List 5 (259-308)' },
+        list5: { min: 259, max: 315, label: 'List 5 (259-315)' },
     };
     const [headers, setHeaders] = useState(initialHeaders);
     const [rows, setRows] = useState(initialRows);

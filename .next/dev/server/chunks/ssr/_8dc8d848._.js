@@ -380,8 +380,8 @@ function DashboardClient({ headers: initialHeaders, rows: initialRows, stats: in
         },
         list5: {
             min: 259,
-            max: 308,
-            label: 'List 5 (259-308)'
+            max: 315,
+            label: 'List 5 (259-315)'
         }
     };
     const [headers, setHeaders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialHeaders);

@@ -52,6 +52,13 @@
   font-weight: 700;
 }
 
+.StatsCard-module__PjJ0xW__percentage {
+  color: var(--secondary);
+  margin-top: .25rem;
+  font-size: .875rem;
+  font-weight: 500;
+}
+
 .StatsCard-module__PjJ0xW__icon {
   opacity: .1;
   font-size: 2.5rem;

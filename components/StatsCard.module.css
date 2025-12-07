@@ -50,6 +50,13 @@
     color: var(--foreground);
 }
 
+.percentage {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--secondary);
+    margin-top: 0.25rem;
+}
+
 .icon {
     position: absolute;
     right: 1.5rem;

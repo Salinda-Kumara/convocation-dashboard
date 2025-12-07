@@ -259,6 +259,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="purple"
                     onClick={() => handleFilterClick('allApproved')}
                     isActive={activeFilter === 'allApproved'}
+                    percentage={filteredStats.total > 0 ? ((filteredStats.allApproved / filteredStats.total) * 100).toFixed(1) : 0}
                 />
                 <StatsCard
                     label="Submitted"
@@ -267,6 +268,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="green"
                     onClick={() => handleFilterClick('submitted')}
                     isActive={activeFilter === 'submitted'}
+                    percentage={filteredStats.total > 0 ? ((filteredStats.submitted / filteredStats.total) * 100).toFixed(1) : 0}
                 />
                 <StatsCard
                     label="Approval Pending"
@@ -275,6 +277,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="orange"
                     onClick={() => handleFilterClick('pending')}
                     isActive={activeFilter === 'pending'}
+                    percentage={filteredStats.total > 0 ? ((filteredStats.pending / filteredStats.total) * 100).toFixed(1) : 0}
                 />
                 <StatsCard
                     label="Incomplete"
@@ -283,6 +286,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="yellow"
                     onClick={() => handleFilterClick('incomplete')}
                     isActive={activeFilter === 'incomplete'}
+                    percentage={filteredStats.total > 0 ? ((filteredStats.incomplete / filteredStats.total) * 100).toFixed(1) : 0}
                 />
                 <StatsCard
                     label="Not Submitted"
@@ -291,6 +295,7 @@ export default function DashboardClient({ headers: initialHeaders, rows: initial
                     color="red"
                     onClick={() => handleFilterClick('notSubmitted')}
                     isActive={activeFilter === 'notSubmitted'}
+                    percentage={filteredStats.total > 0 ? ((filteredStats.notSubmitted / filteredStats.total) * 100).toFixed(1) : 0}
                 />
                 <StatsCard
                     label="Total Guests"
